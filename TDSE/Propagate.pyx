@@ -51,12 +51,6 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
     if elliptical_pulse == False:
         if rank == 0:
             print("Building Matrices for Linear Pulse \n ")
-
-        #if np.dot(total_polarization, np.array([1,0,0])) != 0 or np.dot(total_polarization, np.array([0,1,0])) != 0 :
-        #     Int_Ham_Temp_Right = eval("Int." + input_par["gauge"] + "_Gauge_Right_Circular_Matrix_" + input_par["block_type"] + "(input_par)")
-        #     Int_Ham_Temp_Left = eval("Int." + input_par["gauge"] + "_Gauge_Left_Circular_Matrix_" + input_par["block_type"] + "(input_par)")
-        #     Int_Ham_Temp_Right.scale(1.0j)
-        #     Int_Ham_Temp_Left.scale(1.0j)
         
         if np.dot(total_polarization, np.array([1,0,0])) != 0:   
            
@@ -103,9 +97,7 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
                     build_status["Dip_Mat_Y_Stat"] = True
                     if rank == 0:
                         print("Built the Y Dipole Matrix \n")
-        #if np.dot(total_polarization, np.array([1,0,0])) != 0 or np.dot(total_polarization, np.array([0,1,0])) != 0 :
-         #   del Int_Ham_Temp_Left
-          #  del Int_Ham_Temp_Right
+        
         
         if np.dot(total_polarization, np.array([0,0,1])) != 0: 
             Int_Ham_Z = eval("Int." + input_par["gauge"] + "_Gauge_Z_Matrix_" + input_par["block_type"] + "(input_par)")
@@ -134,22 +126,12 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
         if rank == 0:
             print("Building Matrices for Elliptical Pulse \n ")
             
-        Int_Ham_Right = eval("Int." + input_par["gauge"] + "_Gauge_Right_Circular_Matrix_" + input_par["block_type"] + "(input_par)")
-
-        #Int_Ham_Right = eval("Int." + input_par["gauge"] + "_Gauge_Right_Circular_Matrix_Upper_" + input_par["block_type"] + "(input_par)")
-        #Int_Ham_Right_Lower = eval("Int." + input_par["gauge"] + "_Gauge_Right_Circular_Matrix_Lower_" + input_par["block_type"] + "(input_par)")
-        #Int_Ham_Right.axpy(1.0, Int_Ham_Right_Lower, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
-        
+        Int_Ham_Right = eval("Int." + input_par["gauge"] + "_Gauge_Right_Circular_Matrix_" + input_par["block_type"] + "(input_par)")        
         Int_Ham_Right.scale(-1.0j * input_par["time_spacing"] * 0.5)
         Full_Ham.axpy(0.0, Int_Ham_Right, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
         build_status["Int_Mat_Right_Stat"]  = True
 
-        Int_Ham_Left = eval("Int." + input_par["gauge"] + "_Gauge_Left_Circular_Matrix_Upper_" + input_par["block_type"] + "(input_par)")
-        
-        #Int_Ham_Left = eval("Int." + input_par["gauge"] + "_Gauge_Left_Circular_Matrix_Upper_" + input_par["block_type"] + "(input_par)")
-        #Int_Ham_Left_Lower = eval("Int." + input_par["gauge"] + "_Gauge_Left_Circular_Matrix_Lower_" + input_par["block_type"] + "(input_par)")
-        #Int_Ham_Left.axpy(1.0, Int_Ham_Left_Lower, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
-        
+        Int_Ham_Left = eval("Int." + input_par["gauge"] + "_Gauge_Left_Circular_Matrix_" + input_par["block_type"] + "(input_par)")
         Int_Ham_Left.scale(-1.0j * input_par["time_spacing"] * 0.5)
         Full_Ham.axpy(0.0, Int_Ham_Left, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
         build_status["Int_Mat_Left_Stat"]  = True
