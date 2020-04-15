@@ -1,0 +1,9 @@
+/var/spool/slurmd/job346739/slurm_script: line 16: /home/becker/yoge8051/Research/PlusUltra/Analysis: Is a directory
+
+The following have been reloaded with a version change:
+  1) intel-gcc/4.9.4 => intel-gcc/6.3.0
+
+/var/spool/slurmd/job346739/slurm_script: line 25: cd: /home/becker/yoge8051/Research/Jobs/Lamda/Diff_Intensity/Case_A7/: No such file or directory
+photon9.colorado.edu
+/home/becker/yoge8051/Research/PlusUltra/Analysis
+/var/spool/slurmd/job346739/slurm_script: line 28: /home/becker/yoge8051/Research/Jobs/Lamda/Diff_Intensity/Case_A7//results.log: No such file or directory

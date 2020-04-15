@@ -318,13 +318,16 @@ def M_Distribution(Population):
     for k in Population.keys():
         m = k[2]
         n = k[0]
-        if n <= 5:
-            continue
-        m_array[m] += Population[k]
+        if n >= 4:
+            m_array[m] += Population[k]
+        
     
+    print(m_array.keys())
+    print(m_array.values())
+
     plt.bar(m_array.keys(), m_array.values(), align='center', alpha=1, log = True, color = 'blue')
     # plt.title("Distribution of m quantum number")
-    plt.ylim(pow(10,-7), 0.5*pow(10, -2))
+    plt.ylim(pow(10,-7), pow(10, -1))
     xticks = m_values
     xlabel = m_values
     plt.xlabel("m", fontsize=18)
@@ -334,7 +337,7 @@ def M_Distribution(Population):
     
     plt.xlim(-8,8)
 
-    plt.savefig("DI_M_Dist_Case_4.png")
+    # plt.savefig("M_Dist_A.png")
 
 def Population_Comparison(Pop_1, Pop_2, Pop_3):
     l_array_1 = {}
@@ -440,23 +443,23 @@ if __name__=="__main__":
         Populations.append(Pop)
         
 
-        # N_L_Population_Plotter(N_L_Pop, "N_L_Population_" + "Case_13", 5)
-        # N_M_Population_Plotter(N_M_Pop, "N_M_Population_" + "Case_13", 5)
+        N_L_Population_Plotter(N_L_Pop, "N_L_Population_", 5)
+        N_M_Population_Plotter(N_M_Pop, "N_M_Population_", 5)
 
         # N_L_Given_M_Population_Plotter(N_L_Pop_Given_M)
         # L_Distribution(Pop)
-        M_Distribution(Pop)
+        # M_Distribution(Pop)
 
 
 
-    # ion = 0
+    ion = 0
 
-    # for k in Populations[0].keys():
-    #     ion += Populations[0][k]
-    #     print(k, Populations[0][k])
+    for k in Populations[0].keys():
+        ion += Populations[0][k]
+        ## print(k, Populations[0][k])
   
 
-    # print((1.0 - ion)*100)
+    print((1.0 - ion)*100)
 
     # Joel = {}
     # for k in Populations[0].keys():
