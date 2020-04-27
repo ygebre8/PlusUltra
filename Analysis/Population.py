@@ -443,12 +443,12 @@ if __name__=="__main__":
         Populations.append(Pop)
         
 
-        N_L_Population_Plotter(N_L_Pop, "N_L_Population_", 5)
-        N_M_Population_Plotter(N_M_Pop, "N_M_Population_", 5)
+        # N_L_Population_Plotter(N_L_Pop, "N_L_Population_", 5)
+        # N_M_Population_Plotter(N_M_Pop, "N_M_Population_", 5)
 
         # N_L_Given_M_Population_Plotter(N_L_Pop_Given_M)
         # L_Distribution(Pop)
-        # M_Distribution(Pop)
+        M_Distribution(Pop)
 
 
 
@@ -456,7 +456,7 @@ if __name__=="__main__":
 
     for k in Populations[0].keys():
         ion += Populations[0][k]
-        ## print(k, Populations[0][k])
+        # print(k, Populations[0][k])
   
 
     print((1.0 - ion)*100)
