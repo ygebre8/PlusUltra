@@ -13,43 +13,49 @@ if True:
     import Module as Mod
     from scipy.special import sph_harm
     from matplotlib.colors import LogNorm
+    from numpy import pi
     
 
-
-# def K_Sphere(coef_dic, input_par):
-#     phi = np.arange(-np.pi, np.pi, input_par["d_angle"])
-#     theta = np.arange(0, np.pi+input_par["d_angle"], input_par["d_angle"])    
-#     theta, phi = np.meshgrid(theta, phi)
-#     out_going_wave = np.zeros(phi.shape, dtype=complex)
-
-#     for l in range(0, input_par["l_max"]+ 1):    
-#         m_range = min(l, input_par["m_max"])
-#         for m in range(-1*m_range, m_range + 1):
-#             coef = coef_dic[str((l,m))][0] + 1j*coef_dic[str((l,m))][1]
-#             out_going_wave += coef*sph_harm(m, l, phi, theta)
-#     return phi, theta, out_going_wave
 def PAD_Momentum(coef_main, input_par):
     
-    resolution = 0.01
-    x_momentum = np.arange(-1, 1, resolution)
-    y_momentum = np.arange(-1, 1, resolution)
-    z_momentum = np.arange(-1, 1, 0.05)
+    resolution = 0.02
+    x_momentum = np.arange(-1.7, 1.7 + resolution, resolution)
+    y_momentum = np.arange(-1.7 , 1.7 + resolution, resolution)
+    z_momentum = np.arange(-1.7 , 1.7 + 0.05, 0.05)
 
     pad_value = np.zeros((x_momentum.size,y_momentum.size))
-
-    # cdef int i, j, l 
-    # cdef double px, py, pz, phi, theta
 
     for i, px in enumerate(x_momentum):
         print(px)
         for j, py in enumerate(y_momentum):
             pad_value_temp = 0.0
             for l, pz in enumerate(z_momentum):
-                if pz==0 or px == 0 or py == 0:
-                    continue
+            
                 k = np.sqrt(px*px + py*py + pz*pz)
-                phi = np.arctan(py/px)
+                if k == 0:
+                    continue
+                
+                if px > 0 and py > 0:
+                    phi = np.arctan(py/px)
+                elif px > 0 and py < 0:
+                    phi = np.arctan(py/px) + 2*pi
+                elif px < 0 and py > 0:
+                    phi = np.arctan(py/px) + pi
+                elif px < 0 and py < 0:
+                    phi = np.arctan(py/px) + pi
+                elif px == 0 and py == 0:
+                    phi = 0
+                elif px == 0 and py > 0:
+                    phi = pi / 2
+                elif px == 0 and py < 0:
+                    phi = 3*pi / 2
+                elif py == 0 and px > 0:
+                    phi = 0
+                elif py == 0 and px < 0:
+                    phi = pi
+
                 theta = np.arccos(pz/k)
+
                 coef_dic = coef_main[str(closest(list(coef_main.keys()), k))]
                 pad_value_temp +=  np.abs(K_Sphere(coef_dic, input_par, phi, theta))**2
 
@@ -73,6 +79,7 @@ def closest(lst, k):
 
 
 if __name__=="__main__":
+    print("Job Started")
     input_par = Mod.Input_File_Reader("input.json")
     k_max = 1.5
     dk = 0.05
@@ -89,7 +96,7 @@ if __name__=="__main__":
     
     # plt.xticks(x_momentum, x_momentum)
     # plt.yticks(y_momentum, y_momentum)
-    plt.savefig("PAD_More.png")
+    plt.savefig("PAD_2.png")
     # coef_dic = coef_main[str(dk)]
     # phi, theta, out_going_wave_total = K_Sphere(coef_dic, input_par)
     # out_going_wave_total = np.abs(out_going_wave_total)**2

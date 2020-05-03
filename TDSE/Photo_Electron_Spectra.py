@@ -121,7 +121,7 @@ if __name__=="__main__":
     input_par = Mod.Input_File_Reader("input.json")
     Psi = Psi_Reader(input_par)
     Bound_States = Bound_Reader(input_par)
-    k_max = 1.5
+    k_max = 3.0
     dk = 0.001
     coef_main = {}
 

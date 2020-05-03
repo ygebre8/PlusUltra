@@ -312,6 +312,11 @@ def L_Distribution(Population):
 def M_Distribution(Population):
     m_array = {}
     m_values = np.arange(-13, 14, 1)
+    excit = 0.0
+    for k in Population.keys():
+        if k[0] != 1:
+            excit += Population[k]
+
     for m in m_values:
         m_array[m] = 0.0
 
@@ -319,7 +324,7 @@ def M_Distribution(Population):
         m = k[2]
         n = k[0]
         if n >= 4:
-            m_array[m] += Population[k]
+            m_array[m] += Population[k] / excit
         
     
     print(m_array.keys())
