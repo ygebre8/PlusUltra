@@ -11,6 +11,13 @@ if True:
     import seaborn as sns
     sys.path.append('/home/becker/yoge8051/Research/PlusUltra/TDSE')
     import Module as Mod
+    from numpy import *
+    from matplotlib.pyplot import *
+
+    # Changing font to stix; setting specialized math font properties as directly as possible
+    rcParams['mathtext.fontset'] = 'custom'
+    rcParams['mathtext.it'] = 'STIXGeneral:italic'
+    rcParams['mathtext.bf'] = 'STIXGeneral:italic:bold'
 
 
 def Field_Free_Wavefunction_Reader(Target_file, input):
@@ -122,27 +129,29 @@ def N_L_Population_Plotter(N_L_Pop, file_name, range, m_value = None, vmax = Non
             vmaxlog = -20
         else:
             vmaxlog = int(np.log10(vmax))
-
+    print(vmaxlog)
     label = [pow(10.0, i) for i in np.arange(vmaxlog - range, vmaxlog)]
-    vmax_num = pow(10.0, vmaxlog)
-    vmin_num = pow(10.0, vmaxlog - range )
+    vmax_num = pow(10.0, vmaxlog  - 0.1)
+    vmin_num = pow(10.0, vmaxlog - range)
     
     
-    # sns.set(font_scale=1.6)
+    sns.set(font_scale=1.75)
     axes = sns.heatmap(heat_map, norm=colors.LogNorm(), yticklabels=ylabel, xticklabels=xlabel, linewidths=0.01, 
     cmap="viridis", annot=False, cbar_kws={"ticks":label},  vmin=vmin_num, vmax=vmax_num,)
     
+    # print(heat_map)
 
-    plt.xticks(xticks, fontsize=17, rotation=90)
-    plt.yticks(yticks, fontsize=17, rotation='vertical')
+    plt.xticks(xticks, fontsize=17, rotation=90, fontweight='bold')
+    plt.yticks(yticks, fontsize=17, rotation='vertical', fontweight='bold')
 
-    plt.ylim(1, n_max + 1)
+    plt.ylim(2, n_max + 1)
     plt.xlim(-0.5,n_max)
 
     plt.axvline(x=-0.5)
     plt.axhline(y=1)
-    plt.xlabel('$\it{l}$',fontsize=22)
-    plt.ylabel('$\it{n}$', fontsize=18)
+
+    # plt.ylabel( r"$\mathbf{n}$", fontsize=32, fontweight='bold')
+    plt.text(7, -1, r"$\mathbf{l}$", fontsize=24, fontweight='bold', color = 'k')
 
     # if m_value == None:
     #     # plt.title("N and L States Population")
@@ -156,20 +165,23 @@ def N_L_Population_Plotter(N_L_Pop, file_name, range, m_value = None, vmax = Non
         tick.set_rotation(360)
 
     print(m_value)
-    if m_value == 1:
-        name = "(a)"
-    elif m_value == 2:
-        name = "(b)"
-    elif m_value == 3:
-        name = "(c)"
-    elif m_value == 4:
-        name = "(d)"
-    else:
-        name = ""
-    font = {'size': 22}
-    matplotlib.rc('font', **font)
+    # if m_value == 1:
+    #     name = "(a)"
+    # elif m_value == 2:
+    #     name = "(b)"
+    # elif m_value == 3:
+    #     name = "(c)"
+    # elif m_value == 4:
+    #     name = "(d)"
+    # else:
+    #     name = ""
+    # font = {'size': 22}
+    # matplotlib.rc('font', **font)
 
-    plt.text(12, 5, name, fontsize=22)
+    # plt.text(10, 7, "(h)", fontsize=28, fontweight='bold', color = 'k')
+
+    plt.tight_layout()
+
     plt.savefig(file_name)
     # plt.show()
     plt.clf()
@@ -181,12 +193,12 @@ def N_L_Given_M_Population_Plotter(N_L_Pop_Given_M):
         if(vmax_current > vmax):
             vmax = vmax_current
     for m in N_L_Pop_Given_M.keys():
-        if abs(m) > 6:
+        if abs(m) > 9:
             continue
         if m >= 0:
-            file_name = "Population_Counter-Rotating_For_M=" + str(m).zfill(2) + ".png" 
+            file_name = "Pop_12_5_Neg_5_For_M=" + str(m).zfill(2) + ".png" 
         else:
-            file_name = "Population_Counter-Rotating_For_M=" + str(m).zfill(3) + ".png"
+            file_name = "Pop_12_5_Neg_5_For_M=" + str(m).zfill(3) + ".png"
 
         N_L_Population_Plotter(N_L_Pop_Given_M[m], file_name, 5, m,  vmax)
 
@@ -324,7 +336,7 @@ def M_Distribution(Population):
         m = k[2]
         n = k[0]
         if n >= 4:
-            m_array[m] += Population[k] / excit
+            m_array[m] += Population[k] #/ excit
         
     
     print(m_array.keys())
@@ -447,13 +459,16 @@ if __name__=="__main__":
 
         Populations.append(Pop)
         
+        # N_L_Population_Plotter(N_L_Pop, "Gebre-Bicircular2-Fig4-h", 5)
 
-        # N_L_Population_Plotter(N_L_Pop, "N_L_Population_", 5)
-        # N_M_Population_Plotter(N_M_Pop, "N_M_Population_", 5)
+        N_L_Population_Plotter(N_L_Pop, "N_L_Pop_Helium_Co", 5)
+        
+        # N_M_Population_Plotter(N_M_Pop, "N_M_Pop_Seven_Three", 5)
 
         # N_L_Given_M_Population_Plotter(N_L_Pop_Given_M)
         # L_Distribution(Pop)
-        M_Distribution(Pop)
+
+        # M_Distribution(Pop)
 
 
 
@@ -466,16 +481,6 @@ if __name__=="__main__":
 
     print((1.0 - ion)*100)
 
-    # Joel = {}
-    # for k in Populations[0].keys():
-    #     Joel[str(k)] = Populations[0][k]
-    #     print(str(k))
-    
-    # json = json.dumps(Joel)
-    # f = open("Job_3.json","w")
-    # f.write(json)
-    # f.close()
-    
 
 
 

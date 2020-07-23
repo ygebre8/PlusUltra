@@ -61,7 +61,7 @@ def Bound_Reader(input_par):
 	
     return Bound_Dictionary
 
-def Shooting_Method(k, l, z = 1):
+def Shooting_Method(k, l, input_par, z = 1 ):
 
     dr = input_par["grid_spacing"]
     r = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
@@ -105,8 +105,9 @@ def K_Sphere(k, Psi, Bound_States, input_par):
         for m in range(-1*m_range, m_range + 1):
             for n in range(l + 1, n_max + 1):
                 Psi[(l, m)] -= np.sum(Bound_States[(n,l)].conj()*Psi[(l,m)])*Bound_States[(n,l)]
-            
-            coef =  np.exp(-1.j*phase)*1.j**l * np.sum(coul_wave.conj()*Psi[(l,m)])
+            # np.exp(-1.j*phase)*1.j**l *
+            coef =  np.sum(coul_wave.conj()*Psi[(l,m)])
+            # out_going_wave += coef*sph_harm(m, l, phi, theta)
 
             coef_dic[str((l,m))] = (coef.real, coef.imag)
     # print(out_going_wave, "out")

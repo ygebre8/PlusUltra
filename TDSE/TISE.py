@@ -95,10 +95,24 @@ def Build_Hamiltonian_Second_Order(potential, grid, input_par):
         if i < grid.size - 1:
             Hamiltonian.setValue(i, i+1, (-1.0/2.0)/h2)
     
-    Hamiltonian.setValue(0,0, potential[0]  + (-1.0/2.0)/h2)
-    Hamiltonian.setValue(0,1, 1.0/h2)
-    Hamiltonian.setValue(0,2, (-1.0/2.0)/h2)
+    Hamiltonian.assemblyBegin()
+    Hamiltonian.assemblyEnd()
+    return Hamiltonian
 
+def Build_Hamiltonian_Second_Order_CW(potential, grid, input_par):
+    matrix_size = grid.size
+    h2 = input_par["grid_spacing"]*input_par["grid_spacing"]
+
+    Hamiltonian = PETSc.Mat().createAIJ([matrix_size, matrix_size], nnz=3, comm=PETSc.COMM_WORLD)
+    istart, iend = Hamiltonian.getOwnershipRange()
+    for i  in range(istart, iend):
+
+        Hamiltonian.setValue(i, i, potential[i] +  1.0/h2)    
+        if i >=  1:
+            Hamiltonian.setValue(i, i-1, (-1.0/2.0)/h2)
+        if i < grid.size - 1:
+            Hamiltonian.setValue(i, i+1, (-1.0/2.0)/h2)
+    
     j = grid.size - 1
     Hamiltonian.setValue(j,j, potential[j] + (-1.0/2.0)/h2)
     Hamiltonian.setValue(j,j - 1, 1.0/h2)

@@ -1,5 +1,4 @@
 if True:
-
     from mpl_toolkits.mplot3d import Axes3D
     import numpy as np
     import matplotlib
@@ -16,14 +15,18 @@ if True:
     from numpy import pi
     
 
-def PAD_Momentum(coef_main, input_par):
-    
-    resolution = 0.02
-    x_momentum = np.arange(-1.7, 1.7 + resolution, resolution)
-    y_momentum = np.arange(-1.7 , 1.7 + resolution, resolution)
-    z_momentum = np.arange(-1.7 , 1.7 + 0.05, 0.05)
+def PAD_Momentum(COEF, input_par):
+    # print(COEF.keys())
+    resolution = 0.01
+    x_momentum = np.arange(-1.5 ,1.5 + resolution, resolution)
+    y_momentum = np.arange(-1.5 ,1.5 + resolution, resolution)
 
-    pad_value = np.zeros((x_momentum.size,y_momentum.size))
+    resolution = 0.05
+    z_momentum = np.arange(-1.5 ,1.5 + resolution, resolution)
+    
+    
+
+    pad_value = np.zeros((y_momentum.size,x_momentum.size))
 
     for i, px in enumerate(x_momentum):
         print(px)
@@ -55,13 +58,12 @@ def PAD_Momentum(coef_main, input_par):
                     phi = pi
 
                 theta = np.arccos(pz/k)
-
-                coef_dic = coef_main[str(closest(list(coef_main.keys()), k))]
+                coef_dic = COEF[closest(list(COEF.keys()), k)]
                 pad_value_temp +=  np.abs(K_Sphere(coef_dic, input_par, phi, theta))**2
 
-            pad_value[i, j] = pad_value_temp[0][0]
+            pad_value[j, i] = pad_value_temp[0][0]
 
-    return pad_value, x_momentum, y_momentum
+    return pad_value, x_momentum, y_momentum 
 
 def K_Sphere(coef_dic, input_par, phi, theta):
     theta, phi = np.meshgrid(theta, phi)
@@ -77,49 +79,33 @@ def K_Sphere(coef_dic, input_par, phi, theta):
 def closest(lst, k): 
     return lst[min(range(len(lst)), key = lambda i: abs(float(lst[i])-k))] 
 
+def Coef_Plotter(coef_main, COEF, l, m):
+    k_max = 2
+    dk = 0.01
+    k_array = np.arange(dk, k_max + dk, dk)
+    coef = np.zeros(len(k_array), dtype=complex)
+    
+    for i, k in enumerate(k_array): 
+        k = round(k , 5)
+        coef[i] = np.absolute(coef_main[str(k)][str((l,m))][0] + 1.0j*coef_main[str(k)][str((l,m))][1])
+
+    plt.plot(k_array, coef)
+
+    plt.xlim(-0.1,2)
+    plt.savefig("COEF_Old.png")
 
 if __name__=="__main__":
     print("Job Started")
     input_par = Mod.Input_File_Reader("input.json")
-    k_max = 1.5
-    dk = 0.05
     coef_main = {}
 
     with open("PAD.json") as file:
         coef_main = json.load(file)
 
+    # Coef_Plotter(coef_main, COEF, 5, 0)
+
     pad_value, x_momentum, y_momentum = PAD_Momentum(coef_main, input_par)
-    #pad_value = np.log(pad_value)#/ pad_value.max()
-    #print(pad_value.max())
-
+    pad_value = pad_value / pad_value.max()
     plt.imshow(pad_value, cmap='jet')#, interpolation="spline16")#, interpolation='nearest')
-    
-    # plt.xticks(x_momentum, x_momentum)
-    # plt.yticks(y_momentum, y_momentum)
-    plt.savefig("PAD_2.png")
-    # coef_dic = coef_main[str(dk)]
-    # phi, theta, out_going_wave_total = K_Sphere(coef_dic, input_par)
-    # out_going_wave_total = np.abs(out_going_wave_total)**2
+    plt.savefig("PAD_Old.png")
 
-    # for k in np.arange(2*dk, k_max, dk):
-    #     k = round(k , 5) 
-    #     coef_dic = coef_main[str(k)]
-    #     phi, theta, out_going_wave = K_Sphere(coef_dic, input_par)
-    #     out_going_wave_total += np.abs(out_going_wave)**2
-    
-    # out_going_wave_total = out_going_wave_total/out_going_wave_total.max()
-
-    # X, Y, Z = out_going_wave_total*np.sin(theta)*np.cos(phi), out_going_wave_total*np.sin(theta)*np.sin(phi), out_going_wave_total*np.cos(theta)
-
-    # fig = plt.figure()
-    # ax = fig.add_subplot(111, projection='3d')
-    # cmap = cm.get_cmap("viridis")
-    # ax.plot_surface(X, Y, Z, facecolors=cmap(out_going_wave_total))
-    # ax.set_xlim(-1, 1)
-    # ax.set_ylim(-1, 1)
-    # ax.set_zlim(-1, 1)
-    # ax.set_xlabel("x")
-    # ax.set_ylabel("y")
-    # ax.set_zlabel("z")
-
-    # plt.savefig("PAD_New_A.png")
