@@ -1,0 +1,61 @@
+{
+    "grid_size": 50,
+    "grid_spacing": 0.1,
+    "ECS_region": 0.95,
+    "order": "Fourth",
+    "n_max": 14,
+    "potential": "Coulomb_Eff_Potential",
+    "solver": "SLEPC",
+    "Target_File": "Helium.h5",
+    "tolerance": 1e-10,
+    "inital_state": {
+        "amplitudes": [
+            1.0
+        ],
+        "n,l,m_values": [
+            [
+                1,
+                0,
+                0
+            ]
+        ],
+        "phase": 0
+    },
+    "l_max": 20,
+    "m_max": 0,
+    "lamda_max": 60,
+    "R_o": 2,
+    "block_type": "L_Block",
+    "time_spacing": 0.05,
+    "laser": {
+        "frequency_shift": 1,
+        "pulses": [
+            {
+                "intensity": 1.0e14,
+                "envelop": "Sin",
+                "omega": 0.0855,
+                "num_of_cycles": 15,
+                "CEP": 0,
+                "polarization": [
+                    1,
+                    0,
+                    0
+                ],
+                "poynting": [
+                    0,
+                    0,
+                    1
+                ],
+                "ellipticity": -1,
+                "cycle_delay": 0
+            }
+        ]
+    },
+    "time_propagator": "Crank_Nicolson",
+    "gauge": "Velocity",
+    "HHG": 1,
+    "Dipole": 1,
+    "propagate": 1,
+    "psi_write_frequency": 1,
+    "TDSE_File": "Length.h5"
+}
