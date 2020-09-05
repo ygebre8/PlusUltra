@@ -16,12 +16,12 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 
 
-def Length_Gauge_Z_Matrix_L_Block(input_par):
+def Length_Gauge_Z_Matrix(input_par):
   
     cdef double factor
     cdef int l_block, m_block, grid_idx, col_idx, grid_size
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size 
     matrix_size = grid_size * len(index_map_l_m)
@@ -50,11 +50,11 @@ def Length_Gauge_Z_Matrix_L_Block(input_par):
     Length_Gauge_Int_Hamiltonian.assemblyEnd()
     return Length_Gauge_Int_Hamiltonian 
 
-def Length_Gauge_X_Matrix_L_Block(input_par):
+def Length_Gauge_X_Matrix(input_par):
 
     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size
     matrix_size = grid_size * len(index_map_l_m)
@@ -98,11 +98,11 @@ def Length_Gauge_X_Matrix_L_Block(input_par):
     Length_Gauge_Int_Hamiltonian.assemblyEnd()
     return Length_Gauge_Int_Hamiltonian
 
-def Length_Gauge_Y_Matrix_L_Block(input_par):
+def Length_Gauge_Y_Matrix(input_par):
     
     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size
     matrix_size = grid_size * len(index_map_l_m)
@@ -146,11 +146,11 @@ def Length_Gauge_Y_Matrix_L_Block(input_par):
     Length_Gauge_Int_Hamiltonian.assemblyEnd()
     return Length_Gauge_Int_Hamiltonian 
 
-def Length_Gauge_Right_Circular_Matrix_L_Block(input_par):
+def Length_Gauge_Right_Circular_Matrix(input_par):
     
     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size
     matrix_size = grid_size * len(index_map_l_m)
@@ -189,11 +189,11 @@ def Length_Gauge_Right_Circular_Matrix_L_Block(input_par):
     Length_Gauge_Int_Hamiltonian.assemblyEnd()
     return Length_Gauge_Int_Hamiltonian 
 
-def Length_Gauge_Left_Circular_Matrix_L_Block(input_par):
+def Length_Gauge_Left_Circular_Matrix(input_par):
     
     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size
     matrix_size = grid_size * len(index_map_l_m)
@@ -232,48 +232,48 @@ def Length_Gauge_Left_Circular_Matrix_L_Block(input_par):
     Length_Gauge_Int_Hamiltonian.assemblyEnd()
     return Length_Gauge_Int_Hamiltonian 
 
-def Velocity_Gauge_Z_Matrix_L_Block(input_par):
-    Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par)
-    Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par)
+def Velocity_Gauge_Z_Matrix(input_par):
+    Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper(input_par)
+    Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower(input_par)
     Int_Ham_Upper.axpy(1.0, Int_Ham_Lower,structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
     return Int_Ham_Upper
 
-def Velocity_Gauge_X_Matrix_L_Block(input_par):
-    Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
-    Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+def Velocity_Gauge_X_Matrix(input_par):
+    Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+    Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
     Int_Ham_Right.axpy(1.0, Int_Ham_Left,structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
     Int_Ham_Right.scale(0.5)
     return Int_Ham_Right
 
-def Velocity_Gauge_Y_Matrix_L_Block(input_par):
-    Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
-    Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+def Velocity_Gauge_Y_Matrix(input_par):
+    Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+    Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
     Int_Ham_Right.axpy(-1.0, Int_Ham_Left, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
     Int_Ham_Right.scale(-0.5j)
     return Int_Ham_Right
     
 
-def Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par):
+def Velocity_Gauge_Right_Circular_Matrix(input_par):
     
-    Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par)
-    Int_Ham_Right_Lower  = Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(input_par)
+    Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper(input_par)
+    Int_Ham_Right_Lower  = Velocity_Gauge_Right_Circular_Matrix_Lower(input_par)
     Int_Ham_Right.axpy(1.0, Int_Ham_Right_Lower, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
     
     return Int_Ham_Right
 
-def Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par):
+def Velocity_Gauge_Left_Circular_Matrix(input_par):
 
-    Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par)
-    Int_Ham_Left_Lower = Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(input_par)
+    Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper(input_par)
+    Int_Ham_Left_Lower = Velocity_Gauge_Left_Circular_Matrix_Lower(input_par)
     Int_Ham_Left.axpy(1.0, Int_Ham_Left_Lower, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
     
     return Int_Ham_Left
 
-def Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par):
+def Velocity_Gauge_Z_Matrix_Upper(input_par):
     cdef double h2
     cdef int l_block, m_block, grid_idx, col_idx, grid_size
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size 
     matrix_size = grid_size * len(index_map_l_m)
@@ -304,11 +304,11 @@ def Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par):
     Velocity_Gauge_Int_Hamiltonian.assemblyEnd()
     return Velocity_Gauge_Int_Hamiltonian
 
-def Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par):
+def Velocity_Gauge_Z_Matrix_Lower(input_par):
     cdef double h2
     cdef int l_block, m_block, grid_idx, col_idx, grid_size
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size 
     matrix_size = grid_size * len(index_map_l_m)
@@ -340,12 +340,12 @@ def Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par):
     return Velocity_Gauge_Int_Hamiltonian
 
 
-def Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par):
+def Velocity_Gauge_Right_Circular_Matrix_Upper(input_par):
     cdef double h2
     cdef complex factor
     cdef int l_block, m_block, grid_idx, col_idx, grid_size
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size 
     matrix_size = grid_size * len(index_map_l_m)
@@ -378,12 +378,12 @@ def Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par):
     Velocity_Gauge_Int_Hamiltonian.assemblyEnd()
    
     return Velocity_Gauge_Int_Hamiltonian 
-def Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(input_par):
+def Velocity_Gauge_Right_Circular_Matrix_Lower(input_par):
     cdef double h2
     cdef complex factor
     cdef int l_block, m_block, grid_idx, col_idx, grid_size
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size 
     matrix_size = grid_size * len(index_map_l_m)
@@ -416,12 +416,12 @@ def Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(input_par):
     
     return Velocity_Gauge_Int_Hamiltonian 
 
-def Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par):
+def Velocity_Gauge_Left_Circular_Matrix_Upper(input_par):
     cdef double h2
     cdef complex factor
     cdef int l_block, m_block, grid_idx, col_idx, grid_size
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size 
     matrix_size = grid_size * len(index_map_l_m)
@@ -453,12 +453,12 @@ def Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par):
     Velocity_Gauge_Int_Hamiltonian.assemblyEnd()
     return Velocity_Gauge_Int_Hamiltonian 
 
-def Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(input_par):
+def Velocity_Gauge_Left_Circular_Matrix_Lower(input_par):
     cdef double h2
     cdef complex factor
     cdef int l_block, m_block, grid_idx, col_idx, grid_size
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size 
     matrix_size = grid_size * len(index_map_l_m)

@@ -15,7 +15,7 @@ def Input_File_Reader(input_file = "input.json"):
         input_paramters = json.load(input_file)
     return input_paramters
     
-def Index_Map_L_Block(input_par):
+def Index_Map(input_par):
     l_max = input_par["l_max"]
     m_max = input_par["m_max"]
     index_map_l_m = {}
@@ -33,28 +33,6 @@ def Index_Map_L_Block(input_par):
             count += 1
     return index_map_l_m, index_map_box
     
-def Index_Map_M_Block(input_par):
-    l_max = input_par["l_max"]
-    m_max = input_par["m_max"]
-    index_map_m_l = {}
-    index_map_box = {}
-    count = 0
-    for m in np.arange(0, m_max + 1):
-
-        for l in np.arange(m, l_max + 1):
-            index_map_m_l[count] = (m,l)
-            index_map_box[(m,l)] = count
-            count += 1
-
-        if m > 0:
-            m = -1*m
-            for l in np.arange(abs(m), l_max + 1):
-                index_map_m_l[count] = (m,l)
-                index_map_box[(m,l)] = count
-                count += 1
-
-    return index_map_m_l, index_map_box
-
 def Target_File_Reader(input_par):
     file = h5py.File(input_par["Target_File"], 'r')
     energy = {}

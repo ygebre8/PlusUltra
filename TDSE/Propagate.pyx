@@ -35,7 +35,7 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
 
     laser_pulse, laser_time, total_polarization, total_poynting, elliptical_pulse = LP.Build_Laser_Pulse(input_par)    
     
-    FF_Ham = eval("FF.Build_FF_Hamiltonian_" + input_par["order"] +"_Order_" + input_par["block_type"] + "(input_par)")
+    FF_Ham = eval("FF.Build_FF_Hamiltonian_" + input_par["order"] +"_Order(input_par)")
     FF_Ham.scale(-1.0j * input_par["time_spacing"] * 0.5)
 
     build_status = Mod.Matrix_Build_Status(input)
@@ -54,7 +54,7 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
         
         if np.dot(total_polarization, np.array([1,0,0])) != 0:   
            
-            Int_Ham_X = eval("Int." + input_par["gauge"] + "_Gauge_X_Matrix_" + input_par["block_type"] + "(input_par)")
+            Int_Ham_X = eval("Int." + input_par["gauge"] + "_Gauge_X_Matrix(input_par)")
             Int_Ham_X.scale(-1.0j * input_par["time_spacing"] * 0.5)
             Full_Ham.axpy(0.0, Int_Ham_X, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
             build_status["Int_Mat_X_Stat"] = True
@@ -62,14 +62,14 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
                 print("Built the "+  str(input_par["gauge"]) + " Gauge X Interaction Matrix \n")
 
             if input_par["HHG"] == 1:
-                Dip_Acc_Mat_X = eval("DA.Dipole_Acceleration_X_Matrix_" + input_par["block_type"] + "(input_par)")
+                Dip_Acc_Mat_X = eval("DA.Dipole_Acceleration_X_Matrix(input_par)")
                 Dip_Acc_X = np.zeros(len(laser_time), dtype=complex)
                 build_status["Dip_Acc_Mat_X_Stat"] = True
                 if rank == 0:
                     print("Built the X Dipole_Acceleration Matrix \n")
             
             if input_par["Dipole"] == 1:
-                    Dip_Mat_X =  Int.Length_Gauge_X_Matrix_L_Block(input_par)
+                    Dip_Mat_X =  Int.Length_Gauge_X_Matrix(input_par)
                     Dip_X = np.zeros(len(laser_time), dtype=complex)
                     build_status["Dip_Mat_X_Stat"] = True
                     if rank == 0:
@@ -77,7 +77,7 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
 
         if np.dot(total_polarization, np.array([0,1,0])) != 0 : 
 
-            Int_Ham_Y = eval("Int." + input_par["gauge"] + "_Gauge_Y_Matrix_" + input_par["block_type"] + "(input_par)")
+            Int_Ham_Y = eval("Int." + input_par["gauge"] + "_Gauge_Y_Matrix(input_par)")
             Int_Ham_Y.scale(-1.0j * input_par["time_spacing"] * 0.5)
             Full_Ham.axpy(0.0, Int_Ham_Y, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
             build_status["Int_Mat_Y_Stat"] = True
@@ -85,14 +85,14 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
                  print("Built the "+  str(input_par["gauge"]) + " Gauge Y Interaction Matrix \n")
 
             if input_par["HHG"] == 1:
-                Dip_Acc_Mat_Y = eval("DA.Dipole_Acceleration_Y_Matrix_" + input_par["block_type"] + "(input_par)")
+                Dip_Acc_Mat_Y = eval("DA.Dipole_Acceleration_Y_Matrix(input_par)")
                 Dip_Acc_Y = np.zeros(len(laser_time), dtype=complex)
                 build_status["Dip_Acc_Mat_Y_Stat"] = True
                 if rank == 0:
                     print("Built the Y Dipole_Acceleration Matrix \n")
         
             if input_par["Dipole"] == 1:
-                    Dip_Mat_Y =  Int.Length_Gauge_Y_Matrix_L_Block(input_par)
+                    Dip_Mat_Y =  Int.Length_Gauge_Y_Matrix(input_par)
                     Dip_Y = np.zeros(len(laser_time), dtype=complex)
                     build_status["Dip_Mat_Y_Stat"] = True
                     if rank == 0:
@@ -100,7 +100,7 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
         
         
         if np.dot(total_polarization, np.array([0,0,1])) != 0: 
-            Int_Ham_Z = eval("Int." + input_par["gauge"] + "_Gauge_Z_Matrix_" + input_par["block_type"] + "(input_par)")
+            Int_Ham_Z = eval("Int." + input_par["gauge"] + "_Gauge_Z_Matrix(input_par)")
             Int_Ham_Z.scale(-1.0j * input_par["time_spacing"] * 0.5)
             Full_Ham.axpy(0.0, Int_Ham_Z, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
             build_status["Int_Mat_Z_Stat"] = True
@@ -108,14 +108,14 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
                  print("Built the "+  str(input_par["gauge"]) + " Gauge Z Interaction Matrix \n")
             
             if input_par["HHG"] == 1:
-                Dip_Acc_Mat_Z = eval("DA.Dipole_Acceleration_Z_Matrix_" + input_par["block_type"] + "(input_par)")
+                Dip_Acc_Mat_Z = eval("DA.Dipole_Acceleration_Z_Matrix(input_par)")
                 Dip_Acc_Z = np.zeros(len(laser_time), dtype=complex)
                 build_status["Dip_Acc_Mat_Z_Stat"] = True
                 if rank == 0:
                     print("Built the Z Dipole_Acceleration Matrix \n")
             
             if input_par["Dipole"] == 1:
-                    Dip_Mat_Z =  Int.Length_Gauge_Z_Matrix_L_Block(input_par)
+                    Dip_Mat_Z =  Int.Length_Gauge_Z_Matrix(input_par)
                     Dip_Z = np.zeros(len(laser_time), dtype=complex)
                     build_status["Dip_Mat_Z_Stat"] = True
                     if rank == 0:
@@ -126,12 +126,12 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
         if rank == 0:
             print("Building Matrices for Elliptical Pulse \n ")
             
-        Int_Ham_Right = eval("Int." + input_par["gauge"] + "_Gauge_Right_Circular_Matrix_" + input_par["block_type"] + "(input_par)")        
+        Int_Ham_Right = eval("Int." + input_par["gauge"] + "_Gauge_Right_Circular_Matrix(input_par)")        
         Int_Ham_Right.scale(-1.0j * input_par["time_spacing"] * 0.5)
         Full_Ham.axpy(0.0, Int_Ham_Right, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
         build_status["Int_Mat_Right_Stat"]  = True
 
-        Int_Ham_Left = eval("Int." + input_par["gauge"] + "_Gauge_Left_Circular_Matrix_" + input_par["block_type"] + "(input_par)")
+        Int_Ham_Left = eval("Int." + input_par["gauge"] + "_Gauge_Left_Circular_Matrix(input_par)")
         Int_Ham_Left.scale(-1.0j * input_par["time_spacing"] * 0.5)
         Full_Ham.axpy(0.0, Int_Ham_Left, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
         build_status["Int_Mat_Left_Stat"]  = True
@@ -141,26 +141,26 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
                 
 
         if input_par["HHG"] == 1:
-                Dip_Acc_Mat_X = eval("DA.Dipole_Acceleration_X_Matrix_" + input_par["block_type"] + "(input_par)")
+                Dip_Acc_Mat_X = eval("DA.Dipole_Acceleration_X_Matrix(input_par)")
                 Dip_Acc_X = np.zeros(len(laser_time), dtype=complex)
                 build_status["Dip_Acc_Mat_X_Stat"] = True
                 if rank == 0:
                     print("Built the X Dipole_Acceleration Matrix \n")
 
-                Dip_Acc_Mat_Y = eval("DA.Dipole_Acceleration_Y_Matrix_" + input_par["block_type"] + "(input_par)")
+                Dip_Acc_Mat_Y = eval("DA.Dipole_Acceleration_Y_Matrix(input_par)")
                 Dip_Acc_Y = np.zeros(len(laser_time), dtype=complex)
                 build_status["Dip_Acc_Mat_Y_Stat"] = True
                 if rank == 0:
                     print("Built the Y Dipole_Acceleration Matrix \n")
 
         if input_par["Dipole"] == 1:
-                Dip_Mat_X =  Int.Length_Gauge_X_Matrix_L_Block(input_par)
+                Dip_Mat_X =  Int.Length_Gauge_X_Matrix(input_par)
                 Dip_X = np.zeros(len(laser_time), dtype=complex)
                 build_status["Dip_Mat_X_Stat"] = True
                 if rank == 0:
                     print("Built the X Dipole Matrix \n")
 
-                Dip_Mat_Y =  Int.Length_Gauge_Y_Matrix_L_Block(input_par)
+                Dip_Mat_Y =  Int.Length_Gauge_Y_Matrix(input_par)
                 Dip_Y = np.zeros(len(laser_time), dtype=complex)
                 build_status["Dip_Mat_Y_Stat"] = True
                 if rank == 0:
@@ -168,7 +168,7 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
     
 
         if np.dot(total_poynting,np.array([0,0,1])) != 1: 
-            Int_Ham_Z = eval("Int." + input_par["gauge"] + "_Gauge_Z_Matrix_" + input_par["block_type"] + "(input_par)")
+            Int_Ham_Z = eval("Int." + input_par["gauge"] + "_Gauge_Z_Matrix(input_par)")
             Int_Ham_Z.scale(-1.0j * input_par["time_spacing"] * 0.5)
             Full_Ham.axpy(0.0, Int_Ham_Z, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
             build_status["Int_Mat_Z_Stat"] = True
@@ -176,14 +176,14 @@ def Crank_Nicolson_Time_Propagator(input_par, psi_inital):
                  print("Built the "+  str(input_par["gauge"]) + " Gauge Z Interaction Matrix \n")
             
             if input_par["HHG"] == 1:
-                Dip_Acc_Mat_Z = eval("DA.Dipole_Acceleration_Z_Matrix_" + input_par["block_type"] + "(input_par)")
+                Dip_Acc_Mat_Z = eval("DA.Dipole_Acceleration_Z_Matrix(input_par)")
                 Dip_Acc_Z = np.zeros(len(laser_time), dtype=complex)
                 build_status["Dip_Acc_Mat_Z_Stat"]
                 if rank == 0:
                     print("Built the Z Dipole_Acceleration Matrix \n")
             
             if input_par["Dipole"] == 1:
-                    Dip_Mat_Z =  Int.Length_Gauge_Z_Matrix_L_Block(input_par)
+                    Dip_Mat_Z =  Int.Length_Gauge_Z_Matrix(input_par)
                     Dip_Z = np.zeros(len(laser_time), dtype=complex)
                     build_status["Dip_Mat_Z_Stat"] = True
                     if rank == 0:

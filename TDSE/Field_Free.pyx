@@ -15,12 +15,12 @@ if True:
     comm = MPI.COMM_WORLD
     rank = comm.Get_rank()
 
-def Build_FF_Hamiltonian_Fourth_Order_L_Block(input_par):
+def Build_FF_Hamiltonian_Fourth_Order(input_par):
 
     cdef float h2
     cdef int grid_size, ECS, l_block, grid_idx, ECS_idx
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size
     matrix_size = grid_size * len(index_map_box)
@@ -110,12 +110,12 @@ def Build_FF_Hamiltonian_Fourth_Order_L_Block(input_par):
     FF_Hamiltonian.assemblyEnd()
     return FF_Hamiltonian  
 
-def Build_FF_Hamiltonian_Second_Order_L_Block(input_par):
+def Build_FF_Hamiltonian_Second_Order(input_par):
 
     cdef double h2
     cdef int grid_size, l_block, grid_idx, ECS_idx
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size
     matrix_size = grid_size * len(index_map_box)

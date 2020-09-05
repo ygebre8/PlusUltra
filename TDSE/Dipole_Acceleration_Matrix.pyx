@@ -26,7 +26,7 @@ def X_and_Y_Matrix_Coeff_Calculator(input_par):
     
     cdef int l, m, m_prime, l_prime
     
-    with open("/home/becker/yoge8051/Research/PlusUltra/TDSE/wigner_3j.json") as file:
+    with open(sys.path[0] + "/wigner_3j.json") as file:
         wigner_3j_dict = json.load(file)
 
 
@@ -68,23 +68,20 @@ def Z_Matrix_Coeff_Calculator(input_par):
     Dip_Acc_Z_Lower_Coeff = {}
 
     cdef int l, m
-
-    with open("/home/becker/yoge8051/Research/PlusUltra/TDSE/wigner_3j.json") as file:
-        wigner_3j_dict = json.load(file)
-        for l in range(input_par["l_max"]+1):
-            
-            for m in range(-1*l, l+1):
-                Dip_Acc_Z_Upper_Coeff[l,m] = (l+1)/np.sqrt((2*l+1)*(2*l+3))
-                if abs(m) < l and l > 0:
-                    Dip_Acc_Z_Lower_Coeff[l,m] = (l)/np.sqrt((2*l-1)*(2*l+1))
+    for l in range(input_par["l_max"]+1):
+        
+        for m in range(-1*l, l+1):
+            Dip_Acc_Z_Upper_Coeff[l,m] = (l+1)/np.sqrt((2*l+1)*(2*l+3))
+            if abs(m) < l and l > 0:
+                Dip_Acc_Z_Lower_Coeff[l,m] = (l)/np.sqrt((2*l-1)*(2*l+1))
             
     return Dip_Acc_Z_Upper_Coeff, Dip_Acc_Z_Lower_Coeff
 
-def Dipole_Acceleration_Z_Matrix_L_Block(input_par):
+def Dipole_Acceleration_Z_Matrix(input_par):
 
     cdef int l_block, m_block, grid_size, grid_idx, columon_idx
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size
     matrix_size = grid_size * len(index_map_l_m)
@@ -111,11 +108,11 @@ def Dipole_Acceleration_Z_Matrix_L_Block(input_par):
     Dipole_Acceleration_Matrix.assemblyEnd()
     return Dipole_Acceleration_Matrix
 
-def Dipole_Acceleration_X_Matrix_L_Block(input_par):
+def Dipole_Acceleration_X_Matrix(input_par):
     
     cdef int l_block, m_block, grid_size, columon_idx, grid_idx
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size
     matrix_size = grid_size * len(index_map_l_m)
@@ -156,11 +153,11 @@ def Dipole_Acceleration_X_Matrix_L_Block(input_par):
     Dipole_Acceleration_Matrix.assemblyEnd()
     return Dipole_Acceleration_Matrix
 
-def Dipole_Acceleration_Y_Matrix_L_Block(input_par):
+def Dipole_Acceleration_Y_Matrix(input_par):
 
     cdef int l_block, m_block, grid_size, columon_idx, grid_idx
 
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     grid_size = grid.size
     matrix_size = grid_size * len(index_map_l_m)

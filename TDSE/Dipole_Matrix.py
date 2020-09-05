@@ -7,8 +7,7 @@ if True:
     from sympy.physics.wigner import gaunt, wigner_3j
     import Module as Mod 
     import Potential as Pot
-    
-         
+             
 if True:
     import petsc4py
     from petsc4py import PETSc
@@ -18,279 +17,8 @@ if True:
     comm = MPI.COMM_WORLD
     rank = comm.Get_rank()
 
-
-def Dipole_Acceleration_Z_Matrix_L_Block(input_par):
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
-    grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
-    matrix_size = grid.size * len(index_map_l_m)
-    h = abs(grid[1] - grid[0]) 
-
-    Dipole_Acceleration_Matrix = PETSc.Mat().createAIJ([matrix_size, matrix_size], nnz=2, comm=PETSc.COMM_WORLD)
-    istart, iend = Dipole_Acceleration_Matrix.getOwnershipRange() 
-    for i in range(istart, iend):
-        l_block = index_map_l_m[floor(i/grid.size)][0]
-        m_block = index_map_l_m[floor(i/grid.size)][1]
-        grid_idx = i % grid.size 
-        
-        if l_block < input_par["l_max"]:
-            columon_idx = grid.size*index_map_box[(l_block + 1, m_block)] + grid_idx
-            CG_Coeff = (l_block+1) / np.sqrt((2*l_block+1)*(2*l_block+3))
-            Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-            
-        if abs(m_block) < l_block and l_block > 0:
-            columon_idx = grid.size*index_map_box[(l_block - 1, m_block)] + grid_idx
-            CG_Coeff = (l_block) / np.sqrt((2*l_block-1)*(2*l_block+1))
-            Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-           
-    Dipole_Acceleration_Matrix.assemblyBegin()
-    Dipole_Acceleration_Matrix.assemblyEnd()
-    return Dipole_Acceleration_Matrix
-
-def Dipole_Acceleration_X_Matrix_L_Block(input_par):
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
-    grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
-    matrix_size = grid.size * len(index_map_l_m)
-    h = abs(grid[1] - grid[0]) 
-
-    with open("/home/becker/yoge8051/Research/Computational_Atomic_Phyics/TDSE/wigner_3j.json") as file:
-        wigner_3j_dict = json.load(file)
-
-    Dipole_Acceleration_Matrix = PETSc.Mat().createAIJ([matrix_size, matrix_size], nnz=4, comm=PETSc.COMM_WORLD)
-    istart, iend = Dipole_Acceleration_Matrix.getOwnershipRange() 
-    for i in range(istart, iend):
-        l_block = index_map_l_m[floor(i/grid.size)][0]
-        m_block = index_map_l_m[floor(i/grid.size)][1]
-        grid_idx = i % grid.size 
-        
-        if input_par["m_max"] == 0:
-            Dipole_Acceleration_Matrix.setValue(i,i,0.0)
-            continue
-
-        if l_block < input_par["l_max"]:
-            l_prime = l_block + 1
-            factor = pow(-1.0, m_block)*np.sqrt((2*l_block+1)*(2*l_prime+1)/2)*wigner_3j_dict[str((l_block,0,l_prime,0,1,0))]
-
-            m_prime = m_block - 1
-            CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] - wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-            columon_idx = grid.size*index_map_box[(l_prime, m_prime)] + grid_idx
-            Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-            m_prime = m_block + 1
-            CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] - wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-            columon_idx = grid.size*index_map_box[(l_prime, m_prime)] + grid_idx
-            Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-        if l_block > 0:
-            l_prime = l_block - 1
-            factor = pow(-1.0, m_block)*np.sqrt((2*l_block+1)*(2*l_prime+1)/2)*wigner_3j_dict[str((l_block,0,l_prime,0,1,0))]
-
-            if -1*m_block < l_prime:
-                m_prime = m_block - 1
-                CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] - wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-                columon_idx = grid.size*index_map_box[(l_prime, m_prime)] + grid_idx
-                Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-            if m_block < l_prime:
-                m_prime = m_block + 1
-                CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] - wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-                columon_idx = grid.size*index_map_box[(l_prime, m_prime)] + grid_idx
-                Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-    Dipole_Acceleration_Matrix.assemblyBegin()
-    Dipole_Acceleration_Matrix.assemblyEnd()
-    return Dipole_Acceleration_Matrix
-
-def Dipole_Acceleration_Y_Matrix_L_Block(input_par):
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
-    grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
-    matrix_size = grid.size * len(index_map_l_m)
-    h = abs(grid[1] - grid[0]) 
-
-    with open("/home/becker/yoge8051/Research/Computational_Atomic_Phyics/TDSE/wigner_3j.json") as file:
-        wigner_3j_dict = json.load(file)
-
-    Dipole_Acceleration_Matrix = PETSc.Mat().createAIJ([matrix_size, matrix_size], nnz=4, comm=PETSc.COMM_WORLD)
-    istart, iend = Dipole_Acceleration_Matrix.getOwnershipRange() 
-    for i in range(istart, iend):
-        l_block = index_map_l_m[floor(i/grid.size)][0]
-        m_block = index_map_l_m[floor(i/grid.size)][1]
-        grid_idx = i % grid.size 
-        
-        if input_par["m_max"] == 0:
-            Dipole_Acceleration_Matrix.setValue(i,i,0.0)
-            continue
-        
-        if l_block < input_par["l_max"]:
-            l_prime = l_block + 1
-            factor = 1.0j*pow(-1.0, m_block)*np.sqrt((2*l_block+1)*(2*l_prime+1)/2)* wigner_3j_dict[str((l_block,0,l_prime,0,1,0))]
-
-            m_prime = m_block - 1
-            CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] + wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-            columon_idx = grid.size*index_map_box[(l_prime, m_prime)] + grid_idx
-            Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-            m_prime = m_block + 1
-            CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] + wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-            columon_idx = grid.size*index_map_box[(l_prime, m_prime)] + grid_idx
-            Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-        if l_block > 0:
-            l_prime = l_block - 1
-            factor = 1.0j*pow(-1.0, m_block)*np.sqrt((2*l_block+1)*(2*l_prime+1)/2)* wigner_3j_dict[str((l_block,0,l_prime,0,1,0))]
-
-            if -1*m_block < l_prime:
-                m_prime = m_block - 1
-                CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] + wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-                columon_idx = grid.size*index_map_box[(l_prime, m_prime)] + grid_idx
-                Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-            if m_block < l_prime:
-                m_prime = m_block + 1
-                CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] + wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-                columon_idx = grid.size*index_map_box[(l_prime, m_prime)] + grid_idx
-                Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-    Dipole_Acceleration_Matrix.assemblyBegin()
-    Dipole_Acceleration_Matrix.assemblyEnd()
-    return Dipole_Acceleration_Matrix
-
-def Dipole_Acceleration_Z_Matrix_M_Block(input_par):
-    index_map_m_l, index_map_box = Mod.Index_Map_M_Block(input_par)
-    grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
-    matrix_size = grid.size * len(index_map_m_l)
-    h = abs(grid[1] - grid[0]) 
-
-    Dipole_Acceleration_Matrix = PETSc.Mat().createAIJ([matrix_size, matrix_size], nnz=2, comm=PETSc.COMM_WORLD)
-    istart, iend = Dipole_Acceleration_Matrix.getOwnershipRange() 
-    for i in range(istart, iend):
-        l_block = index_map_m_l[floor(i/grid.size)][1]
-        m_block = index_map_m_l[floor(i/grid.size)][0]
-        grid_idx = i % grid.size 
-        
-        if l_block < input_par["l_max"]:
-            columon_idx = grid.size*index_map_box[(m_block, l_block + 1)] + grid_idx
-            CG_Coeff = (l_block+1) / np.sqrt((2*l_block+1)*(2*l_block+3))
-            Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-            
-        if abs(m_block) < l_block and l_block > 0:
-            columon_idx = grid.size*index_map_box[(m_block, l_block - 1)] + grid_idx
-            CG_Coeff = (l_block) / np.sqrt((2*l_block-1)*(2*l_block+1))
-            Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-           
-    Dipole_Acceleration_Matrix.assemblyBegin()
-    Dipole_Acceleration_Matrix.assemblyEnd()
-    return Dipole_Acceleration_Matrix
-
-def Dipole_Acceleration_X_Matrix_M_Block(input_par):
-    index_map_m_l, index_map_box = Mod.Index_Map_M_Block(input_par)
-    grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
-    matrix_size = grid.size * len(index_map_m_l)
-    h = abs(grid[1] - grid[0]) 
-
-    with open("/home/becker/yoge8051/Research/Computational_Atomic_Phyics/TDSE/wigner_3j.json") as file:
-        wigner_3j_dict = json.load(file)
-
-    Dipole_Acceleration_Matrix = PETSc.Mat().createAIJ([matrix_size, matrix_size], nnz=4, comm=PETSc.COMM_WORLD)
-    istart, iend = Dipole_Acceleration_Matrix.getOwnershipRange() 
-    for i in range(istart, iend):
-        l_block = index_map_m_l[floor(i/grid.size)][1]
-        m_block = index_map_m_l[floor(i/grid.size)][0]
-        grid_idx = i % grid.size 
-        
-        if input_par["m_max"] == 0:
-            Dipole_Acceleration_Matrix.setValue(i,i,0.0)
-            continue
-
-        if l_block < input_par["l_max"]:
-            l_prime = l_block + 1
-            factor = pow(-1.0, m_block)*np.sqrt((2*l_block+1)*(2*l_prime+1)/2)*wigner_3j_dict[str((l_block,0,l_prime,0,1,0))]
-
-            m_prime = m_block - 1
-            CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] - wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-            columon_idx = grid.size*index_map_box[(m_prime, l_prime)] + grid_idx
-            Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-            m_prime = m_block + 1
-            CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] - wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-            columon_idx = grid.size*index_map_box[(m_prime, l_prime)] + grid_idx
-            Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-        if l_block > 0:
-            l_prime = l_block - 1
-            factor = pow(-1.0, m_block)*np.sqrt((2*l_block+1)*(2*l_prime+1)/2)*wigner_3j_dict[str((l_block,0,l_prime,0,1,0))]
-
-            if -1*m_block < l_prime:
-                m_prime = m_block - 1
-                CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] - wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-                columon_idx = grid.size*index_map_box[(m_prime, l_prime)] + grid_idx
-                Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-            if m_block < l_prime:
-                m_prime = m_block + 1
-                CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] - wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-                columon_idx = grid.size*index_map_box[(m_prime, l_prime)] + grid_idx
-                Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-    Dipole_Acceleration_Matrix.assemblyBegin()
-    Dipole_Acceleration_Matrix.assemblyEnd()
-    return Dipole_Acceleration_Matrix
-
-def Dipole_Acceleration_Y_Matrix_M_Block(input_par):
-    index_map_m_l, index_map_box = Mod.Index_Map_M_Block(input_par)
-    grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
-    matrix_size = grid.size * len(index_map_m_l)
-    h = abs(grid[1] - grid[0]) 
-
-    with open("/home/becker/yoge8051/Research/Computational_Atomic_Phyics/TDSE/wigner_3j.json") as file:
-        wigner_3j_dict = json.load(file)
-
-    Dipole_Acceleration_Matrix = PETSc.Mat().createAIJ([matrix_size, matrix_size], nnz=4, comm=PETSc.COMM_WORLD)
-    istart, iend = Dipole_Acceleration_Matrix.getOwnershipRange() 
-    for i in range(istart, iend):
-        l_block = index_map_m_l[floor(i/grid.size)][1]
-        m_block = index_map_m_l[floor(i/grid.size)][0]
-        grid_idx = i % grid.size 
-        
-        if input_par["m_max"] == 0:
-            Dipole_Acceleration_Matrix.setValue(i,i,0.0)
-            continue
-        
-        if l_block < input_par["l_max"]:
-            l_prime = l_block + 1
-            factor = 1.0j*pow(-1.0, m_block)*np.sqrt((2*l_block+1)*(2*l_prime+1)/2)* wigner_3j_dict[str((l_block,0,l_prime,0,1,0))]
-
-            m_prime = m_block - 1
-            CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] + wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-            columon_idx = grid.size*index_map_box[(m_prime, l_prime)] + grid_idx
-            Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-            m_prime = m_block + 1
-            CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] + wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-            columon_idx = grid.size*index_map_box[(m_prime, l_prime)] + grid_idx
-            Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-        if l_block > 0:
-            l_prime = l_block - 1
-            factor = 1.0j*pow(-1.0, m_block)*np.sqrt((2*l_block+1)*(2*l_prime+1)/2)* wigner_3j_dict[str((l_block,0,l_prime,0,1,0))]
-
-            if -1*m_block < l_prime:
-                m_prime = m_block - 1
-                CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] + wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-                columon_idx = grid.size*index_map_box[(m_prime, l_prime)] + grid_idx
-                Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-            if m_block < l_prime:
-                m_prime = m_block + 1
-                CG_Coeff = factor*(wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,-1))] + wigner_3j_dict[str((l_block,-1*m_block,l_prime,m_prime,1,1))])
-                columon_idx = grid.size*index_map_box[(m_prime, l_prime)] + grid_idx
-                Dipole_Acceleration_Matrix.setValue(i, columon_idx, 1.0/np.power(grid[grid_idx],2.0) * CG_Coeff)
-
-    Dipole_Acceleration_Matrix.assemblyBegin()
-    Dipole_Acceleration_Matrix.assemblyEnd()
-    return Dipole_Acceleration_Matrix
-
-def Dipole_Z_Matrix_L_Block(input_par):
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+def Dipole_Z_Matrix(input_par):
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     matrix_size = grid.size * len(index_map_l_m)
     h = abs(grid[1] - grid[0]) 
@@ -316,13 +44,13 @@ def Dipole_Z_Matrix_L_Block(input_par):
     Dipole_Matrix.assemblyEnd()
     return Dipole_Matrix
 
-def Dipole_X_Matrix_L_Block(input_par):
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+def Dipole_X_Matrix(input_par):
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     matrix_size = grid.size * len(index_map_l_m)
     h = abs(grid[1] - grid[0]) 
 
-    with open("/home/becker/yoge8051/Research/Computational_Atomic_Phyics/TDSE/wigner_3j.json") as file:
+    with open(sys.path[0] + "/wigner_3j.json") as file:
         wigner_3j_dict = json.load(file)
 
     Dipole_Matrix = PETSc.Mat().createAIJ([matrix_size, matrix_size], nnz=4, comm=PETSc.COMM_WORLD)
@@ -370,13 +98,13 @@ def Dipole_X_Matrix_L_Block(input_par):
     Dipole_Matrix.assemblyEnd()
     return Dipole_Matrix
 
-def Dipole_Y_Matrix_L_Block(input_par):
-    index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+def Dipole_Y_Matrix(input_par):
+    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
     matrix_size = grid.size * len(index_map_l_m)
     h = abs(grid[1] - grid[0]) 
 
-    with open("/home/becker/yoge8051/Research/Computational_Atomic_Phyics/TDSE/wigner_3j.json") as file:
+    with open(sys.path[0] + "/wigner_3j.json") as file:
         wigner_3j_dict = json.load(file)
 
     Dipole_Matrix = PETSc.Mat().createAIJ([matrix_size, matrix_size], nnz=4, comm=PETSc.COMM_WORLD)

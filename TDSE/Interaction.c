@@ -1328,6 +1328,7 @@ static const char __pyx_k_grid_idx[] = "grid_idx";
 static const char __pyx_k_petsc4py[] = "petsc4py";
 static const char __pyx_k_setValue[] = "setValue";
 static const char __pyx_k_time_mod[] = "time_mod";
+static const char __pyx_k_Index_Map[] = "Index_Map";
 static const char __pyx_k_Make_Grid[] = "Make_Grid";
 static const char __pyx_k_Structure[] = "Structure";
 static const char __pyx_k_createAIJ[] = "createAIJ";
@@ -1354,40 +1355,39 @@ static const char __pyx_k_Interaction_pyx[] = "Interaction.pyx";
 static const char __pyx_k_Coeff_Minus_Plus[] = "Coeff_Minus_Plus";
 static const char __pyx_k_Coeff_Plus_Minus[] = "Coeff_Plus_Minus";
 static const char __pyx_k_Coeff_Minus_Minus[] = "Coeff_Minus_Minus";
-static const char __pyx_k_Index_Map_L_Block[] = "Index_Map_L_Block";
 static const char __pyx_k_getOwnershipRange[] = "getOwnershipRange";
 static const char __pyx_k_Int_Ham_Left_Lower[] = "Int_Ham_Left_Lower";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_Int_Ham_Right_Lower[] = "Int_Ham_Right_Lower";
 static const char __pyx_k_Coefficent_Calculator[] = "Coefficent_Calculator";
+static const char __pyx_k_Length_Gauge_X_Matrix[] = "Length_Gauge_X_Matrix";
+static const char __pyx_k_Length_Gauge_Y_Matrix[] = "Length_Gauge_Y_Matrix";
+static const char __pyx_k_Length_Gauge_Z_Matrix[] = "Length_Gauge_Z_Matrix";
+static const char __pyx_k_Velocity_Gauge_X_Matrix[] = "Velocity_Gauge_X_Matrix";
+static const char __pyx_k_Velocity_Gauge_Y_Matrix[] = "Velocity_Gauge_Y_Matrix";
+static const char __pyx_k_Velocity_Gauge_Z_Matrix[] = "Velocity_Gauge_Z_Matrix";
 static const char __pyx_k_DIFFERENT_NONZERO_PATTERN[] = "DIFFERENT_NONZERO_PATTERN";
 static const char __pyx_k_Length_Gauge_Int_Hamiltonian[] = "Length_Gauge_Int_Hamiltonian";
-static const char __pyx_k_Length_Gauge_X_Matrix_L_Block[] = "Length_Gauge_X_Matrix_L_Block";
-static const char __pyx_k_Length_Gauge_Y_Matrix_L_Block[] = "Length_Gauge_Y_Matrix_L_Block";
-static const char __pyx_k_Length_Gauge_Z_Matrix_L_Block[] = "Length_Gauge_Z_Matrix_L_Block";
+static const char __pyx_k_Velocity_Gauge_Z_Matrix_Lower[] = "Velocity_Gauge_Z_Matrix_Lower";
+static const char __pyx_k_Velocity_Gauge_Z_Matrix_Upper[] = "Velocity_Gauge_Z_Matrix_Upper";
 static const char __pyx_k_Velocity_Gauge_Int_Hamiltonian[] = "Velocity_Gauge_Int_Hamiltonian";
 static const char __pyx_k_Length_Gauge_X_Coeff_Calculator[] = "Length_Gauge_X_Coeff_Calculator";
 static const char __pyx_k_Length_Gauge_Y_Coeff_Calculator[] = "Length_Gauge_Y_Coeff_Calculator";
 static const char __pyx_k_Length_Gauge_Z_Coeff_Calculator[] = "Length_Gauge_Z_Coeff_Calculator";
-static const char __pyx_k_Velocity_Gauge_X_Matrix_L_Block[] = "Velocity_Gauge_X_Matrix_L_Block";
-static const char __pyx_k_Velocity_Gauge_Y_Matrix_L_Block[] = "Velocity_Gauge_Y_Matrix_L_Block";
-static const char __pyx_k_Velocity_Gauge_Z_Matrix_L_Block[] = "Velocity_Gauge_Z_Matrix_L_Block";
-static const char __pyx_k_Velocity_Gauge_Z_Matrix_Lower_L[] = "Velocity_Gauge_Z_Matrix_Lower_L_Block";
-static const char __pyx_k_Velocity_Gauge_Z_Matrix_Upper_L[] = "Velocity_Gauge_Z_Matrix_Upper_L_Block";
 static const char __pyx_k_home_becker_yoge8051_Research_P[] = "/home/becker/yoge8051/Research/PlusUltra/TDSE";
-static const char __pyx_k_Length_Gauge_Left_Circular_Matri[] = "Length_Gauge_Left_Circular_Matrix_L_Block";
+static const char __pyx_k_Length_Gauge_Left_Circular_Matri[] = "Length_Gauge_Left_Circular_Matrix";
 static const char __pyx_k_Length_Gauge_Left_Coeff_Calculat[] = "Length_Gauge_Left_Coeff_Calculator";
-static const char __pyx_k_Length_Gauge_Right_Circular_Matr[] = "Length_Gauge_Right_Circular_Matrix_L_Block";
+static const char __pyx_k_Length_Gauge_Right_Circular_Matr[] = "Length_Gauge_Right_Circular_Matrix";
 static const char __pyx_k_Length_Gauge_Right_Coeff_Calcula[] = "Length_Gauge_Right_Coeff_Calculator";
-static const char __pyx_k_Velocity_Gauge_Left_Circular_Mat[] = "Velocity_Gauge_Left_Circular_Matrix_L_Block";
+static const char __pyx_k_Velocity_Gauge_Left_Circular_Mat[] = "Velocity_Gauge_Left_Circular_Matrix";
 static const char __pyx_k_Velocity_Gauge_Left_Coeff_Calcul[] = "Velocity_Gauge_Left_Coeff_Calculator";
-static const char __pyx_k_Velocity_Gauge_Right_Circular_Ma[] = "Velocity_Gauge_Right_Circular_Matrix_L_Block";
+static const char __pyx_k_Velocity_Gauge_Right_Circular_Ma[] = "Velocity_Gauge_Right_Circular_Matrix";
 static const char __pyx_k_Velocity_Gauge_Rigth_Coeff_Calcu[] = "Velocity_Gauge_Rigth_Coeff_Calculator";
 static const char __pyx_k_Velocity_Gauge_Z_Coeff_Calculato[] = "Velocity_Gauge_Z_Coeff_Calculator";
-static const char __pyx_k_Velocity_Gauge_Left_Circular_Mat_2[] = "Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block";
-static const char __pyx_k_Velocity_Gauge_Left_Circular_Mat_3[] = "Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block";
-static const char __pyx_k_Velocity_Gauge_Right_Circular_Ma_2[] = "Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block";
-static const char __pyx_k_Velocity_Gauge_Right_Circular_Ma_3[] = "Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block";
+static const char __pyx_k_Velocity_Gauge_Left_Circular_Mat_2[] = "Velocity_Gauge_Left_Circular_Matrix_Upper";
+static const char __pyx_k_Velocity_Gauge_Left_Circular_Mat_3[] = "Velocity_Gauge_Left_Circular_Matrix_Lower";
+static const char __pyx_k_Velocity_Gauge_Right_Circular_Ma_2[] = "Velocity_Gauge_Right_Circular_Matrix_Upper";
+static const char __pyx_k_Velocity_Gauge_Right_Circular_Ma_3[] = "Velocity_Gauge_Right_Circular_Matrix_Lower";
 static PyObject *__pyx_n_s_CC;
 static PyObject *__pyx_n_s_COMM_WORLD;
 static PyObject *__pyx_n_s_Coeff_Lower;
@@ -1399,7 +1399,7 @@ static PyObject *__pyx_n_s_Coeff_Upper;
 static PyObject *__pyx_n_s_Coefficent_Calculator;
 static PyObject *__pyx_n_s_DIFFERENT_NONZERO_PATTERN;
 static PyObject *__pyx_n_s_Get_rank;
-static PyObject *__pyx_n_s_Index_Map_L_Block;
+static PyObject *__pyx_n_s_Index_Map;
 static PyObject *__pyx_n_s_Int_Ham_Left;
 static PyObject *__pyx_n_s_Int_Ham_Left_Lower;
 static PyObject *__pyx_n_s_Int_Ham_Lower;
@@ -1414,11 +1414,11 @@ static PyObject *__pyx_n_s_Length_Gauge_Left_Coeff_Calculat;
 static PyObject *__pyx_n_s_Length_Gauge_Right_Circular_Matr;
 static PyObject *__pyx_n_s_Length_Gauge_Right_Coeff_Calcula;
 static PyObject *__pyx_n_s_Length_Gauge_X_Coeff_Calculator;
-static PyObject *__pyx_n_s_Length_Gauge_X_Matrix_L_Block;
+static PyObject *__pyx_n_s_Length_Gauge_X_Matrix;
 static PyObject *__pyx_n_s_Length_Gauge_Y_Coeff_Calculator;
-static PyObject *__pyx_n_s_Length_Gauge_Y_Matrix_L_Block;
+static PyObject *__pyx_n_s_Length_Gauge_Y_Matrix;
 static PyObject *__pyx_n_s_Length_Gauge_Z_Coeff_Calculator;
-static PyObject *__pyx_n_s_Length_Gauge_Z_Matrix_L_Block;
+static PyObject *__pyx_n_s_Length_Gauge_Z_Matrix;
 static PyObject *__pyx_n_s_MPI;
 static PyObject *__pyx_n_s_Make_Grid;
 static PyObject *__pyx_n_s_Mat;
@@ -1435,12 +1435,12 @@ static PyObject *__pyx_n_s_Velocity_Gauge_Right_Circular_Ma;
 static PyObject *__pyx_n_s_Velocity_Gauge_Right_Circular_Ma_2;
 static PyObject *__pyx_n_s_Velocity_Gauge_Right_Circular_Ma_3;
 static PyObject *__pyx_n_s_Velocity_Gauge_Rigth_Coeff_Calcu;
-static PyObject *__pyx_n_s_Velocity_Gauge_X_Matrix_L_Block;
-static PyObject *__pyx_n_s_Velocity_Gauge_Y_Matrix_L_Block;
+static PyObject *__pyx_n_s_Velocity_Gauge_X_Matrix;
+static PyObject *__pyx_n_s_Velocity_Gauge_Y_Matrix;
 static PyObject *__pyx_n_s_Velocity_Gauge_Z_Coeff_Calculato;
-static PyObject *__pyx_n_s_Velocity_Gauge_Z_Matrix_L_Block;
-static PyObject *__pyx_n_s_Velocity_Gauge_Z_Matrix_Lower_L;
-static PyObject *__pyx_n_s_Velocity_Gauge_Z_Matrix_Upper_L;
+static PyObject *__pyx_n_s_Velocity_Gauge_Z_Matrix;
+static PyObject *__pyx_n_s_Velocity_Gauge_Z_Matrix_Lower;
+static PyObject *__pyx_n_s_Velocity_Gauge_Z_Matrix_Upper;
 static PyObject *__pyx_n_s_append;
 static PyObject *__pyx_n_s_argv;
 static PyObject *__pyx_n_s_assemblyBegin;
@@ -1495,22 +1495,22 @@ static PyObject *__pyx_n_s_sys;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_time;
 static PyObject *__pyx_n_s_time_mod;
-static PyObject *__pyx_pf_11Interaction_Length_Gauge_Z_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_2Length_Gauge_X_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_4Length_Gauge_Y_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_22Velocity_Gauge_Z_Matrix_Lower_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_11Interaction_30Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_Length_Gauge_Z_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_2Length_Gauge_X_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_4Length_Gauge_Y_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_22Velocity_Gauge_Z_Matrix_Lower(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_Upper(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_Lower(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Upper(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_11Interaction_30Velocity_Gauge_Left_Circular_Matrix_Lower(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
 static PyObject *__pyx_float_0_0;
 static PyObject *__pyx_float_0_5;
 static PyObject *__pyx_float_1_0;
@@ -1558,26 +1558,26 @@ static PyObject *__pyx_codeobj__32;
 /* "Interaction.pyx":19
  * 
  * 
- * def Length_Gauge_Z_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Z_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef double factor
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_1Length_Gauge_Z_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_1Length_Gauge_Z_Matrix_L_Block = {"Length_Gauge_Z_Matrix_L_Block", (PyCFunction)__pyx_pw_11Interaction_1Length_Gauge_Z_Matrix_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_1Length_Gauge_Z_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_1Length_Gauge_Z_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_1Length_Gauge_Z_Matrix = {"Length_Gauge_Z_Matrix", (PyCFunction)__pyx_pw_11Interaction_1Length_Gauge_Z_Matrix, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_1Length_Gauge_Z_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Length_Gauge_Z_Matrix_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_Length_Gauge_Z_Matrix_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Length_Gauge_Z_Matrix (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_Length_Gauge_Z_Matrix(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_Length_Gauge_Z_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_Length_Gauge_Z_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   int __pyx_v_l_block;
   int __pyx_v_m_block;
   int __pyx_v_grid_idx;
@@ -1609,18 +1609,18 @@ static PyObject *__pyx_pf_11Interaction_Length_Gauge_Z_Matrix_L_Block(CYTHON_UNU
   int __pyx_t_12;
   PyObject *__pyx_t_13 = NULL;
   int __pyx_t_14;
-  __Pyx_RefNannySetupContext("Length_Gauge_Z_Matrix_L_Block", 0);
+  __Pyx_RefNannySetupContext("Length_Gauge_Z_Matrix", 0);
 
   /* "Interaction.pyx":24
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -1691,7 +1691,7 @@ static PyObject *__pyx_pf_11Interaction_Length_Gauge_Z_Matrix_L_Block(CYTHON_UNU
 
   /* "Interaction.pyx":25
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -1765,7 +1765,7 @@ static PyObject *__pyx_pf_11Interaction_Length_Gauge_Z_Matrix_L_Block(CYTHON_UNU
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":26
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -2532,7 +2532,7 @@ static PyObject *__pyx_pf_11Interaction_Length_Gauge_Z_Matrix_L_Block(CYTHON_UNU
  *     Length_Gauge_Int_Hamiltonian.assemblyEnd()
  *     return Length_Gauge_Int_Hamiltonian             # <<<<<<<<<<<<<<
  * 
- * def Length_Gauge_X_Matrix_L_Block(input_par):
+ * def Length_Gauge_X_Matrix(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_Length_Gauge_Int_Hamiltonian);
@@ -2542,7 +2542,7 @@ static PyObject *__pyx_pf_11Interaction_Length_Gauge_Z_Matrix_L_Block(CYTHON_UNU
   /* "Interaction.pyx":19
  * 
  * 
- * def Length_Gauge_Z_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Z_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef double factor
  */
@@ -2557,7 +2557,7 @@ static PyObject *__pyx_pf_11Interaction_Length_Gauge_Z_Matrix_L_Block(CYTHON_UNU
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("Interaction.Length_Gauge_Z_Matrix_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Length_Gauge_Z_Matrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -2577,26 +2577,26 @@ static PyObject *__pyx_pf_11Interaction_Length_Gauge_Z_Matrix_L_Block(CYTHON_UNU
 /* "Interaction.pyx":53
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_X_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_X_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_3Length_Gauge_X_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_3Length_Gauge_X_Matrix_L_Block = {"Length_Gauge_X_Matrix_L_Block", (PyCFunction)__pyx_pw_11Interaction_3Length_Gauge_X_Matrix_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_3Length_Gauge_X_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_3Length_Gauge_X_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_3Length_Gauge_X_Matrix = {"Length_Gauge_X_Matrix", (PyCFunction)__pyx_pw_11Interaction_3Length_Gauge_X_Matrix, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_3Length_Gauge_X_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Length_Gauge_X_Matrix_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_2Length_Gauge_X_Matrix_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Length_Gauge_X_Matrix (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_2Length_Gauge_X_Matrix(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_2Length_Gauge_X_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_2Length_Gauge_X_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   int __pyx_v_l_block;
   int __pyx_v_m_block;
   int __pyx_v_l_prime;
@@ -2631,18 +2631,18 @@ static PyObject *__pyx_pf_11Interaction_2Length_Gauge_X_Matrix_L_Block(CYTHON_UN
   PyObject *(*__pyx_t_11)(PyObject *);
   int __pyx_t_12;
   PyObject *__pyx_t_13 = NULL;
-  __Pyx_RefNannySetupContext("Length_Gauge_X_Matrix_L_Block", 0);
+  __Pyx_RefNannySetupContext("Length_Gauge_X_Matrix", 0);
 
   /* "Interaction.pyx":57
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -2713,7 +2713,7 @@ static PyObject *__pyx_pf_11Interaction_2Length_Gauge_X_Matrix_L_Block(CYTHON_UN
 
   /* "Interaction.pyx":58
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -2787,7 +2787,7 @@ static PyObject *__pyx_pf_11Interaction_2Length_Gauge_X_Matrix_L_Block(CYTHON_UN
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":59
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -3902,7 +3902,7 @@ static PyObject *__pyx_pf_11Interaction_2Length_Gauge_X_Matrix_L_Block(CYTHON_UN
  *     Length_Gauge_Int_Hamiltonian.assemblyEnd()
  *     return Length_Gauge_Int_Hamiltonian             # <<<<<<<<<<<<<<
  * 
- * def Length_Gauge_Y_Matrix_L_Block(input_par):
+ * def Length_Gauge_Y_Matrix(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_Length_Gauge_Int_Hamiltonian);
@@ -3912,7 +3912,7 @@ static PyObject *__pyx_pf_11Interaction_2Length_Gauge_X_Matrix_L_Block(CYTHON_UN
   /* "Interaction.pyx":53
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_X_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_X_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
@@ -3927,7 +3927,7 @@ static PyObject *__pyx_pf_11Interaction_2Length_Gauge_X_Matrix_L_Block(CYTHON_UN
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("Interaction.Length_Gauge_X_Matrix_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Length_Gauge_X_Matrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -3949,26 +3949,26 @@ static PyObject *__pyx_pf_11Interaction_2Length_Gauge_X_Matrix_L_Block(CYTHON_UN
 /* "Interaction.pyx":101
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_Y_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Y_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_5Length_Gauge_Y_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_5Length_Gauge_Y_Matrix_L_Block = {"Length_Gauge_Y_Matrix_L_Block", (PyCFunction)__pyx_pw_11Interaction_5Length_Gauge_Y_Matrix_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_5Length_Gauge_Y_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_5Length_Gauge_Y_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_5Length_Gauge_Y_Matrix = {"Length_Gauge_Y_Matrix", (PyCFunction)__pyx_pw_11Interaction_5Length_Gauge_Y_Matrix, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_5Length_Gauge_Y_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Length_Gauge_Y_Matrix_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_4Length_Gauge_Y_Matrix_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Length_Gauge_Y_Matrix (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_4Length_Gauge_Y_Matrix(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_4Length_Gauge_Y_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_4Length_Gauge_Y_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   int __pyx_v_l_block;
   int __pyx_v_m_block;
   int __pyx_v_l_prime;
@@ -4003,18 +4003,18 @@ static PyObject *__pyx_pf_11Interaction_4Length_Gauge_Y_Matrix_L_Block(CYTHON_UN
   PyObject *(*__pyx_t_11)(PyObject *);
   int __pyx_t_12;
   PyObject *__pyx_t_13 = NULL;
-  __Pyx_RefNannySetupContext("Length_Gauge_Y_Matrix_L_Block", 0);
+  __Pyx_RefNannySetupContext("Length_Gauge_Y_Matrix", 0);
 
   /* "Interaction.pyx":105
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -4085,7 +4085,7 @@ static PyObject *__pyx_pf_11Interaction_4Length_Gauge_Y_Matrix_L_Block(CYTHON_UN
 
   /* "Interaction.pyx":106
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -4159,7 +4159,7 @@ static PyObject *__pyx_pf_11Interaction_4Length_Gauge_Y_Matrix_L_Block(CYTHON_UN
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":107
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -5274,7 +5274,7 @@ static PyObject *__pyx_pf_11Interaction_4Length_Gauge_Y_Matrix_L_Block(CYTHON_UN
  *     Length_Gauge_Int_Hamiltonian.assemblyEnd()
  *     return Length_Gauge_Int_Hamiltonian             # <<<<<<<<<<<<<<
  * 
- * def Length_Gauge_Right_Circular_Matrix_L_Block(input_par):
+ * def Length_Gauge_Right_Circular_Matrix(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_Length_Gauge_Int_Hamiltonian);
@@ -5284,7 +5284,7 @@ static PyObject *__pyx_pf_11Interaction_4Length_Gauge_Y_Matrix_L_Block(CYTHON_UN
   /* "Interaction.pyx":101
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_Y_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Y_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
@@ -5299,7 +5299,7 @@ static PyObject *__pyx_pf_11Interaction_4Length_Gauge_Y_Matrix_L_Block(CYTHON_UN
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("Interaction.Length_Gauge_Y_Matrix_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Length_Gauge_Y_Matrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -5321,26 +5321,26 @@ static PyObject *__pyx_pf_11Interaction_4Length_Gauge_Y_Matrix_L_Block(CYTHON_UN
 /* "Interaction.pyx":149
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_Right_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Right_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_7Length_Gauge_Right_Circular_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_7Length_Gauge_Right_Circular_Matrix_L_Block = {"Length_Gauge_Right_Circular_Matrix_L_Block", (PyCFunction)__pyx_pw_11Interaction_7Length_Gauge_Right_Circular_Matrix_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_7Length_Gauge_Right_Circular_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_7Length_Gauge_Right_Circular_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_7Length_Gauge_Right_Circular_Matrix = {"Length_Gauge_Right_Circular_Matrix", (PyCFunction)__pyx_pw_11Interaction_7Length_Gauge_Right_Circular_Matrix, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_7Length_Gauge_Right_Circular_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Length_Gauge_Right_Circular_Matrix_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Length_Gauge_Right_Circular_Matrix (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   int __pyx_v_l_block;
   int __pyx_v_m_block;
   int __pyx_v_l_prime;
@@ -5373,18 +5373,18 @@ static PyObject *__pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix_L_Bl
   PyObject *(*__pyx_t_11)(PyObject *);
   int __pyx_t_12;
   PyObject *__pyx_t_13 = NULL;
-  __Pyx_RefNannySetupContext("Length_Gauge_Right_Circular_Matrix_L_Block", 0);
+  __Pyx_RefNannySetupContext("Length_Gauge_Right_Circular_Matrix", 0);
 
   /* "Interaction.pyx":153
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 153, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 153, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 153, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -5455,7 +5455,7 @@ static PyObject *__pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix_L_Bl
 
   /* "Interaction.pyx":154
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -5529,7 +5529,7 @@ static PyObject *__pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix_L_Bl
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":155
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -6436,7 +6436,7 @@ static PyObject *__pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix_L_Bl
  *     Length_Gauge_Int_Hamiltonian.assemblyEnd()
  *     return Length_Gauge_Int_Hamiltonian             # <<<<<<<<<<<<<<
  * 
- * def Length_Gauge_Left_Circular_Matrix_L_Block(input_par):
+ * def Length_Gauge_Left_Circular_Matrix(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_Length_Gauge_Int_Hamiltonian);
@@ -6446,7 +6446,7 @@ static PyObject *__pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix_L_Bl
   /* "Interaction.pyx":149
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_Right_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Right_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
@@ -6461,7 +6461,7 @@ static PyObject *__pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix_L_Bl
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("Interaction.Length_Gauge_Right_Circular_Matrix_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Length_Gauge_Right_Circular_Matrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -6481,26 +6481,26 @@ static PyObject *__pyx_pf_11Interaction_6Length_Gauge_Right_Circular_Matrix_L_Bl
 /* "Interaction.pyx":192
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_Left_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Left_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_9Length_Gauge_Left_Circular_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_9Length_Gauge_Left_Circular_Matrix_L_Block = {"Length_Gauge_Left_Circular_Matrix_L_Block", (PyCFunction)__pyx_pw_11Interaction_9Length_Gauge_Left_Circular_Matrix_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_9Length_Gauge_Left_Circular_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_9Length_Gauge_Left_Circular_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_9Length_Gauge_Left_Circular_Matrix = {"Length_Gauge_Left_Circular_Matrix", (PyCFunction)__pyx_pw_11Interaction_9Length_Gauge_Left_Circular_Matrix, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_9Length_Gauge_Left_Circular_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Length_Gauge_Left_Circular_Matrix_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Length_Gauge_Left_Circular_Matrix (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   int __pyx_v_l_block;
   int __pyx_v_m_block;
   int __pyx_v_l_prime;
@@ -6533,18 +6533,18 @@ static PyObject *__pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix_L_Blo
   PyObject *(*__pyx_t_11)(PyObject *);
   int __pyx_t_12;
   PyObject *__pyx_t_13 = NULL;
-  __Pyx_RefNannySetupContext("Length_Gauge_Left_Circular_Matrix_L_Block", 0);
+  __Pyx_RefNannySetupContext("Length_Gauge_Left_Circular_Matrix", 0);
 
   /* "Interaction.pyx":196
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -6615,7 +6615,7 @@ static PyObject *__pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix_L_Blo
 
   /* "Interaction.pyx":197
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -6689,7 +6689,7 @@ static PyObject *__pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix_L_Blo
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":198
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -7596,7 +7596,7 @@ static PyObject *__pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix_L_Blo
  *     Length_Gauge_Int_Hamiltonian.assemblyEnd()
  *     return Length_Gauge_Int_Hamiltonian             # <<<<<<<<<<<<<<
  * 
- * def Velocity_Gauge_Z_Matrix_L_Block(input_par):
+ * def Velocity_Gauge_Z_Matrix(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_Length_Gauge_Int_Hamiltonian);
@@ -7606,7 +7606,7 @@ static PyObject *__pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix_L_Blo
   /* "Interaction.pyx":192
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_Left_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Left_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
@@ -7621,7 +7621,7 @@ static PyObject *__pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix_L_Blo
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("Interaction.Length_Gauge_Left_Circular_Matrix_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Length_Gauge_Left_Circular_Matrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -7641,26 +7641,26 @@ static PyObject *__pyx_pf_11Interaction_8Length_Gauge_Left_Circular_Matrix_L_Blo
 /* "Interaction.pyx":235
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Z_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
- *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par)
- *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par)
+ * def Velocity_Gauge_Z_Matrix(input_par):             # <<<<<<<<<<<<<<
+ *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper(input_par)
+ *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower(input_par)
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_11Velocity_Gauge_Z_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_11Velocity_Gauge_Z_Matrix_L_Block = {"Velocity_Gauge_Z_Matrix_L_Block", (PyCFunction)__pyx_pw_11Interaction_11Velocity_Gauge_Z_Matrix_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_11Velocity_Gauge_Z_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_11Velocity_Gauge_Z_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_11Velocity_Gauge_Z_Matrix = {"Velocity_Gauge_Z_Matrix", (PyCFunction)__pyx_pw_11Interaction_11Velocity_Gauge_Z_Matrix, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_11Velocity_Gauge_Z_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Z_Matrix_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Z_Matrix (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_v_Int_Ham_Upper = NULL;
   PyObject *__pyx_v_Int_Ham_Lower = NULL;
   PyObject *__pyx_r = NULL;
@@ -7670,16 +7670,16 @@ static PyObject *__pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix_L_Block(CYTHON
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Z_Matrix_L_Block", 0);
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Z_Matrix", 0);
 
   /* "Interaction.pyx":236
  * 
- * def Velocity_Gauge_Z_Matrix_L_Block(input_par):
- *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par)             # <<<<<<<<<<<<<<
- *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par)
+ * def Velocity_Gauge_Z_Matrix(input_par):
+ *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper(input_par)             # <<<<<<<<<<<<<<
+ *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower(input_par)
  *     Int_Ham_Upper.axpy(1.0, Int_Ham_Lower,structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Velocity_Gauge_Z_Matrix_Upper_L); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 236, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Velocity_Gauge_Z_Matrix_Upper); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 236, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7700,13 +7700,13 @@ static PyObject *__pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix_L_Block(CYTHON
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":237
- * def Velocity_Gauge_Z_Matrix_L_Block(input_par):
- *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par)
- *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par)             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Z_Matrix(input_par):
+ *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper(input_par)
+ *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower(input_par)             # <<<<<<<<<<<<<<
  *     Int_Ham_Upper.axpy(1.0, Int_Ham_Lower,structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  *     return Int_Ham_Upper
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Velocity_Gauge_Z_Matrix_Lower_L); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 237, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Velocity_Gauge_Z_Matrix_Lower); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 237, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -7727,8 +7727,8 @@ static PyObject *__pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix_L_Block(CYTHON
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":238
- *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par)
- *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par)
+ *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper(input_par)
+ *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower(input_par)
  *     Int_Ham_Upper.axpy(1.0, Int_Ham_Lower,structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)             # <<<<<<<<<<<<<<
  *     return Int_Ham_Upper
  * 
@@ -7766,11 +7766,11 @@ static PyObject *__pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix_L_Block(CYTHON
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "Interaction.pyx":239
- *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par)
+ *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower(input_par)
  *     Int_Ham_Upper.axpy(1.0, Int_Ham_Lower,structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  *     return Int_Ham_Upper             # <<<<<<<<<<<<<<
  * 
- * def Velocity_Gauge_X_Matrix_L_Block(input_par):
+ * def Velocity_Gauge_X_Matrix(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_Int_Ham_Upper);
@@ -7780,9 +7780,9 @@ static PyObject *__pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix_L_Block(CYTHON
   /* "Interaction.pyx":235
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Z_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
- *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par)
- *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par)
+ * def Velocity_Gauge_Z_Matrix(input_par):             # <<<<<<<<<<<<<<
+ *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper(input_par)
+ *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower(input_par)
  */
 
   /* function exit code */
@@ -7792,7 +7792,7 @@ static PyObject *__pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix_L_Block(CYTHON
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Z_Matrix_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Z_Matrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Int_Ham_Upper);
@@ -7805,26 +7805,26 @@ static PyObject *__pyx_pf_11Interaction_10Velocity_Gauge_Z_Matrix_L_Block(CYTHON
 /* "Interaction.pyx":241
  *     return Int_Ham_Upper
  * 
- * def Velocity_Gauge_X_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ * def Velocity_Gauge_X_Matrix(input_par):             # <<<<<<<<<<<<<<
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_13Velocity_Gauge_X_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_13Velocity_Gauge_X_Matrix_L_Block = {"Velocity_Gauge_X_Matrix_L_Block", (PyCFunction)__pyx_pw_11Interaction_13Velocity_Gauge_X_Matrix_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_13Velocity_Gauge_X_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_13Velocity_Gauge_X_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_13Velocity_Gauge_X_Matrix = {"Velocity_Gauge_X_Matrix", (PyCFunction)__pyx_pw_11Interaction_13Velocity_Gauge_X_Matrix, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_13Velocity_Gauge_X_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Velocity_Gauge_X_Matrix_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Velocity_Gauge_X_Matrix (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_v_Int_Ham_Right = NULL;
   PyObject *__pyx_v_Int_Ham_Left = NULL;
   PyObject *__pyx_r = NULL;
@@ -7834,13 +7834,13 @@ static PyObject *__pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix_L_Block(CYTHON
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
-  __Pyx_RefNannySetupContext("Velocity_Gauge_X_Matrix_L_Block", 0);
+  __Pyx_RefNannySetupContext("Velocity_Gauge_X_Matrix", 0);
 
   /* "Interaction.pyx":242
  * 
- * def Velocity_Gauge_X_Matrix_L_Block(input_par):
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)             # <<<<<<<<<<<<<<
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ * def Velocity_Gauge_X_Matrix(input_par):
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)             # <<<<<<<<<<<<<<
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  *     Int_Ham_Right.axpy(1.0, Int_Ham_Left,structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Velocity_Gauge_Right_Circular_Ma); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 242, __pyx_L1_error)
@@ -7864,9 +7864,9 @@ static PyObject *__pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix_L_Block(CYTHON
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":243
- * def Velocity_Gauge_X_Matrix_L_Block(input_par):
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_X_Matrix(input_par):
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)             # <<<<<<<<<<<<<<
  *     Int_Ham_Right.axpy(1.0, Int_Ham_Left,structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  *     Int_Ham_Right.scale(0.5)
  */
@@ -7891,8 +7891,8 @@ static PyObject *__pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix_L_Block(CYTHON
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":244
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  *     Int_Ham_Right.axpy(1.0, Int_Ham_Left,structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)             # <<<<<<<<<<<<<<
  *     Int_Ham_Right.scale(0.5)
  *     return Int_Ham_Right
@@ -7930,7 +7930,7 @@ static PyObject *__pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix_L_Block(CYTHON
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "Interaction.pyx":245
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  *     Int_Ham_Right.axpy(1.0, Int_Ham_Left,structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  *     Int_Ham_Right.scale(0.5)             # <<<<<<<<<<<<<<
  *     return Int_Ham_Right
@@ -7960,7 +7960,7 @@ static PyObject *__pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix_L_Block(CYTHON
  *     Int_Ham_Right.scale(0.5)
  *     return Int_Ham_Right             # <<<<<<<<<<<<<<
  * 
- * def Velocity_Gauge_Y_Matrix_L_Block(input_par):
+ * def Velocity_Gauge_Y_Matrix(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_Int_Ham_Right);
@@ -7970,9 +7970,9 @@ static PyObject *__pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix_L_Block(CYTHON
   /* "Interaction.pyx":241
  *     return Int_Ham_Upper
  * 
- * def Velocity_Gauge_X_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ * def Velocity_Gauge_X_Matrix(input_par):             # <<<<<<<<<<<<<<
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  */
 
   /* function exit code */
@@ -7982,7 +7982,7 @@ static PyObject *__pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix_L_Block(CYTHON
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("Interaction.Velocity_Gauge_X_Matrix_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Velocity_Gauge_X_Matrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Int_Ham_Right);
@@ -7995,26 +7995,26 @@ static PyObject *__pyx_pf_11Interaction_12Velocity_Gauge_X_Matrix_L_Block(CYTHON
 /* "Interaction.pyx":248
  *     return Int_Ham_Right
  * 
- * def Velocity_Gauge_Y_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ * def Velocity_Gauge_Y_Matrix(input_par):             # <<<<<<<<<<<<<<
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_15Velocity_Gauge_Y_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_15Velocity_Gauge_Y_Matrix_L_Block = {"Velocity_Gauge_Y_Matrix_L_Block", (PyCFunction)__pyx_pw_11Interaction_15Velocity_Gauge_Y_Matrix_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_15Velocity_Gauge_Y_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_15Velocity_Gauge_Y_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_15Velocity_Gauge_Y_Matrix = {"Velocity_Gauge_Y_Matrix", (PyCFunction)__pyx_pw_11Interaction_15Velocity_Gauge_Y_Matrix, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_15Velocity_Gauge_Y_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Y_Matrix_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Y_Matrix (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_v_Int_Ham_Right = NULL;
   PyObject *__pyx_v_Int_Ham_Left = NULL;
   PyObject *__pyx_r = NULL;
@@ -8025,13 +8025,13 @@ static PyObject *__pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix_L_Block(CYTHON
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
   __pyx_t_double_complex __pyx_t_6;
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Y_Matrix_L_Block", 0);
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Y_Matrix", 0);
 
   /* "Interaction.pyx":249
  * 
- * def Velocity_Gauge_Y_Matrix_L_Block(input_par):
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)             # <<<<<<<<<<<<<<
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ * def Velocity_Gauge_Y_Matrix(input_par):
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)             # <<<<<<<<<<<<<<
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  *     Int_Ham_Right.axpy(-1.0, Int_Ham_Left, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Velocity_Gauge_Right_Circular_Ma); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 249, __pyx_L1_error)
@@ -8055,9 +8055,9 @@ static PyObject *__pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix_L_Block(CYTHON
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":250
- * def Velocity_Gauge_Y_Matrix_L_Block(input_par):
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Y_Matrix(input_par):
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)             # <<<<<<<<<<<<<<
  *     Int_Ham_Right.axpy(-1.0, Int_Ham_Left, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  *     Int_Ham_Right.scale(-0.5j)
  */
@@ -8082,8 +8082,8 @@ static PyObject *__pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix_L_Block(CYTHON
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":251
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  *     Int_Ham_Right.axpy(-1.0, Int_Ham_Left, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)             # <<<<<<<<<<<<<<
  *     Int_Ham_Right.scale(-0.5j)
  *     return Int_Ham_Right
@@ -8121,7 +8121,7 @@ static PyObject *__pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix_L_Block(CYTHON
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "Interaction.pyx":252
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  *     Int_Ham_Right.axpy(-1.0, Int_Ham_Left, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  *     Int_Ham_Right.scale(-0.5j)             # <<<<<<<<<<<<<<
  *     return Int_Ham_Right
@@ -8165,9 +8165,9 @@ static PyObject *__pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix_L_Block(CYTHON
   /* "Interaction.pyx":248
  *     return Int_Ham_Right
  * 
- * def Velocity_Gauge_Y_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ * def Velocity_Gauge_Y_Matrix(input_par):             # <<<<<<<<<<<<<<
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  */
 
   /* function exit code */
@@ -8177,7 +8177,7 @@ static PyObject *__pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix_L_Block(CYTHON
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Y_Matrix_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Y_Matrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Int_Ham_Right);
@@ -8190,26 +8190,26 @@ static PyObject *__pyx_pf_11Interaction_14Velocity_Gauge_Y_Matrix_L_Block(CYTHON
 /* "Interaction.pyx":256
  * 
  * 
- * def Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Right_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par)
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper(input_par)
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_17Velocity_Gauge_Right_Circular_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_17Velocity_Gauge_Right_Circular_Matrix_L_Block = {"Velocity_Gauge_Right_Circular_Matrix_L_Block", (PyCFunction)__pyx_pw_11Interaction_17Velocity_Gauge_Right_Circular_Matrix_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_17Velocity_Gauge_Right_Circular_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_17Velocity_Gauge_Right_Circular_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_17Velocity_Gauge_Right_Circular_Matrix = {"Velocity_Gauge_Right_Circular_Matrix", (PyCFunction)__pyx_pw_11Interaction_17Velocity_Gauge_Right_Circular_Matrix, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_17Velocity_Gauge_Right_Circular_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Right_Circular_Matrix_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Right_Circular_Matrix (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_v_Int_Ham_Right = NULL;
   PyObject *__pyx_v_Int_Ham_Right_Lower = NULL;
   PyObject *__pyx_r = NULL;
@@ -8219,13 +8219,13 @@ static PyObject *__pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix_L
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Right_Circular_Matrix_L_Block", 0);
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Right_Circular_Matrix", 0);
 
   /* "Interaction.pyx":258
- * def Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par):
+ * def Velocity_Gauge_Right_Circular_Matrix(input_par):
  * 
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par)             # <<<<<<<<<<<<<<
- *     Int_Ham_Right_Lower  = Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(input_par)
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper(input_par)             # <<<<<<<<<<<<<<
+ *     Int_Ham_Right_Lower  = Velocity_Gauge_Right_Circular_Matrix_Lower(input_par)
  *     Int_Ham_Right.axpy(1.0, Int_Ham_Right_Lower, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Velocity_Gauge_Right_Circular_Ma_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 258, __pyx_L1_error)
@@ -8250,8 +8250,8 @@ static PyObject *__pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix_L
 
   /* "Interaction.pyx":259
  * 
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par)
- *     Int_Ham_Right_Lower  = Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper(input_par)
+ *     Int_Ham_Right_Lower  = Velocity_Gauge_Right_Circular_Matrix_Lower(input_par)             # <<<<<<<<<<<<<<
  *     Int_Ham_Right.axpy(1.0, Int_Ham_Right_Lower, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  * 
  */
@@ -8276,8 +8276,8 @@ static PyObject *__pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix_L
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":260
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par)
- *     Int_Ham_Right_Lower  = Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(input_par)
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper(input_par)
+ *     Int_Ham_Right_Lower  = Velocity_Gauge_Right_Circular_Matrix_Lower(input_par)
  *     Int_Ham_Right.axpy(1.0, Int_Ham_Right_Lower, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)             # <<<<<<<<<<<<<<
  * 
  *     return Int_Ham_Right
@@ -8319,7 +8319,7 @@ static PyObject *__pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix_L
  * 
  *     return Int_Ham_Right             # <<<<<<<<<<<<<<
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par):
+ * def Velocity_Gauge_Left_Circular_Matrix(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_Int_Ham_Right);
@@ -8329,9 +8329,9 @@ static PyObject *__pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix_L
   /* "Interaction.pyx":256
  * 
  * 
- * def Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Right_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par)
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper(input_par)
  */
 
   /* function exit code */
@@ -8341,7 +8341,7 @@ static PyObject *__pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix_L
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Right_Circular_Matrix_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Right_Circular_Matrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Int_Ham_Right);
@@ -8354,26 +8354,26 @@ static PyObject *__pyx_pf_11Interaction_16Velocity_Gauge_Right_Circular_Matrix_L
 /* "Interaction.pyx":264
  *     return Int_Ham_Right
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Left_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper(input_par)
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_19Velocity_Gauge_Left_Circular_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_19Velocity_Gauge_Left_Circular_Matrix_L_Block = {"Velocity_Gauge_Left_Circular_Matrix_L_Block", (PyCFunction)__pyx_pw_11Interaction_19Velocity_Gauge_Left_Circular_Matrix_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_19Velocity_Gauge_Left_Circular_Matrix_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_19Velocity_Gauge_Left_Circular_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_19Velocity_Gauge_Left_Circular_Matrix = {"Velocity_Gauge_Left_Circular_Matrix", (PyCFunction)__pyx_pw_11Interaction_19Velocity_Gauge_Left_Circular_Matrix, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_19Velocity_Gauge_Left_Circular_Matrix(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Left_Circular_Matrix_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Left_Circular_Matrix (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_v_Int_Ham_Left = NULL;
   PyObject *__pyx_v_Int_Ham_Left_Lower = NULL;
   PyObject *__pyx_r = NULL;
@@ -8383,13 +8383,13 @@ static PyObject *__pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix_L_
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Left_Circular_Matrix_L_Block", 0);
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Left_Circular_Matrix", 0);
 
   /* "Interaction.pyx":266
- * def Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par):
+ * def Velocity_Gauge_Left_Circular_Matrix(input_par):
  * 
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par)             # <<<<<<<<<<<<<<
- *     Int_Ham_Left_Lower = Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper(input_par)             # <<<<<<<<<<<<<<
+ *     Int_Ham_Left_Lower = Velocity_Gauge_Left_Circular_Matrix_Lower(input_par)
  *     Int_Ham_Left.axpy(1.0, Int_Ham_Left_Lower, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Velocity_Gauge_Left_Circular_Mat_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 266, __pyx_L1_error)
@@ -8414,8 +8414,8 @@ static PyObject *__pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix_L_
 
   /* "Interaction.pyx":267
  * 
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par)
- *     Int_Ham_Left_Lower = Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper(input_par)
+ *     Int_Ham_Left_Lower = Velocity_Gauge_Left_Circular_Matrix_Lower(input_par)             # <<<<<<<<<<<<<<
  *     Int_Ham_Left.axpy(1.0, Int_Ham_Left_Lower, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)
  * 
  */
@@ -8440,8 +8440,8 @@ static PyObject *__pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix_L_
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":268
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par)
- *     Int_Ham_Left_Lower = Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper(input_par)
+ *     Int_Ham_Left_Lower = Velocity_Gauge_Left_Circular_Matrix_Lower(input_par)
  *     Int_Ham_Left.axpy(1.0, Int_Ham_Left_Lower, structure=PETSc.Mat.Structure.DIFFERENT_NONZERO_PATTERN)             # <<<<<<<<<<<<<<
  * 
  *     return Int_Ham_Left
@@ -8483,7 +8483,7 @@ static PyObject *__pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix_L_
  * 
  *     return Int_Ham_Left             # <<<<<<<<<<<<<<
  * 
- * def Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par):
+ * def Velocity_Gauge_Z_Matrix_Upper(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_Int_Ham_Left);
@@ -8493,9 +8493,9 @@ static PyObject *__pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix_L_
   /* "Interaction.pyx":264
  *     return Int_Ham_Right
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Left_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper(input_par)
  */
 
   /* function exit code */
@@ -8505,7 +8505,7 @@ static PyObject *__pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix_L_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Left_Circular_Matrix_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Left_Circular_Matrix", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_Int_Ham_Left);
@@ -8518,26 +8518,26 @@ static PyObject *__pyx_pf_11Interaction_18Velocity_Gauge_Left_Circular_Matrix_L_
 /* "Interaction.pyx":272
  *     return Int_Ham_Left
  * 
- * def Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Z_Matrix_Upper(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_21Velocity_Gauge_Z_Matrix_Upper_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_21Velocity_Gauge_Z_Matrix_Upper_L_Block = {"Velocity_Gauge_Z_Matrix_Upper_L_Block", (PyCFunction)__pyx_pw_11Interaction_21Velocity_Gauge_Z_Matrix_Upper_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_21Velocity_Gauge_Z_Matrix_Upper_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_21Velocity_Gauge_Z_Matrix_Upper(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_21Velocity_Gauge_Z_Matrix_Upper = {"Velocity_Gauge_Z_Matrix_Upper", (PyCFunction)__pyx_pw_11Interaction_21Velocity_Gauge_Z_Matrix_Upper, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_21Velocity_Gauge_Z_Matrix_Upper(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Z_Matrix_Upper_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Z_Matrix_Upper (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   double __pyx_v_h2;
   int __pyx_v_l_block;
   int __pyx_v_m_block;
@@ -8569,18 +8569,18 @@ static PyObject *__pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper_L_Block(
   double __pyx_t_11;
   PyObject *(*__pyx_t_12)(PyObject *);
   int __pyx_t_13;
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Z_Matrix_Upper_L_Block", 0);
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Z_Matrix_Upper", 0);
 
   /* "Interaction.pyx":276
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 276, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 276, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 276, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -8651,7 +8651,7 @@ static PyObject *__pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper_L_Block(
 
   /* "Interaction.pyx":277
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -8725,7 +8725,7 @@ static PyObject *__pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper_L_Block(
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":278
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -9578,7 +9578,7 @@ static PyObject *__pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper_L_Block(
  *     Velocity_Gauge_Int_Hamiltonian.assemblyEnd()
  *     return Velocity_Gauge_Int_Hamiltonian             # <<<<<<<<<<<<<<
  * 
- * def Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par):
+ * def Velocity_Gauge_Z_Matrix_Lower(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_Velocity_Gauge_Int_Hamiltonian);
@@ -9588,7 +9588,7 @@ static PyObject *__pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper_L_Block(
   /* "Interaction.pyx":272
  *     return Int_Ham_Left
  * 
- * def Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Z_Matrix_Upper(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  */
@@ -9602,7 +9602,7 @@ static PyObject *__pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper_L_Block(
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Z_Matrix_Upper_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Z_Matrix_Upper", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -9622,26 +9622,26 @@ static PyObject *__pyx_pf_11Interaction_20Velocity_Gauge_Z_Matrix_Upper_L_Block(
 /* "Interaction.pyx":307
  *     return Velocity_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Z_Matrix_Lower(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_23Velocity_Gauge_Z_Matrix_Lower_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_23Velocity_Gauge_Z_Matrix_Lower_L_Block = {"Velocity_Gauge_Z_Matrix_Lower_L_Block", (PyCFunction)__pyx_pw_11Interaction_23Velocity_Gauge_Z_Matrix_Lower_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_23Velocity_Gauge_Z_Matrix_Lower_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_23Velocity_Gauge_Z_Matrix_Lower(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_23Velocity_Gauge_Z_Matrix_Lower = {"Velocity_Gauge_Z_Matrix_Lower", (PyCFunction)__pyx_pw_11Interaction_23Velocity_Gauge_Z_Matrix_Lower, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_23Velocity_Gauge_Z_Matrix_Lower(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Z_Matrix_Lower_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_22Velocity_Gauge_Z_Matrix_Lower_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Z_Matrix_Lower (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_22Velocity_Gauge_Z_Matrix_Lower(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_22Velocity_Gauge_Z_Matrix_Lower_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_22Velocity_Gauge_Z_Matrix_Lower(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   double __pyx_v_h2;
   int __pyx_v_l_block;
   int __pyx_v_m_block;
@@ -9674,18 +9674,18 @@ static PyObject *__pyx_pf_11Interaction_22Velocity_Gauge_Z_Matrix_Lower_L_Block(
   PyObject *(*__pyx_t_12)(PyObject *);
   int __pyx_t_13;
   int __pyx_t_14;
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Z_Matrix_Lower_L_Block", 0);
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Z_Matrix_Lower", 0);
 
   /* "Interaction.pyx":311
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 311, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 311, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 311, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -9756,7 +9756,7 @@ static PyObject *__pyx_pf_11Interaction_22Velocity_Gauge_Z_Matrix_Lower_L_Block(
 
   /* "Interaction.pyx":312
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -9830,7 +9830,7 @@ static PyObject *__pyx_pf_11Interaction_22Velocity_Gauge_Z_Matrix_Lower_L_Block(
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":313
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -10691,7 +10691,7 @@ static PyObject *__pyx_pf_11Interaction_22Velocity_Gauge_Z_Matrix_Lower_L_Block(
   /* "Interaction.pyx":307
  *     return Velocity_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Z_Matrix_Lower(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  */
@@ -10705,7 +10705,7 @@ static PyObject *__pyx_pf_11Interaction_22Velocity_Gauge_Z_Matrix_Lower_L_Block(
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Z_Matrix_Lower_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Z_Matrix_Lower", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -10725,26 +10725,26 @@ static PyObject *__pyx_pf_11Interaction_22Velocity_Gauge_Z_Matrix_Lower_L_Block(
 /* "Interaction.pyx":343
  * 
  * 
- * def Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Right_Circular_Matrix_Upper(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_25Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_25Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block = {"Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block", (PyCFunction)__pyx_pw_11Interaction_25Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_25Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_25Velocity_Gauge_Right_Circular_Matrix_Upper(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_25Velocity_Gauge_Right_Circular_Matrix_Upper = {"Velocity_Gauge_Right_Circular_Matrix_Upper", (PyCFunction)__pyx_pw_11Interaction_25Velocity_Gauge_Right_Circular_Matrix_Upper, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_25Velocity_Gauge_Right_Circular_Matrix_Upper(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Right_Circular_Matrix_Upper (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_Upper(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_Upper(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   double __pyx_v_h2;
   int __pyx_v_l_block;
   int __pyx_v_m_block;
@@ -10776,18 +10776,18 @@ static PyObject *__pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_U
   double __pyx_t_11;
   PyObject *(*__pyx_t_12)(PyObject *);
   int __pyx_t_13;
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block", 0);
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Right_Circular_Matrix_Upper", 0);
 
   /* "Interaction.pyx":348
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -10858,7 +10858,7 @@ static PyObject *__pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_U
 
   /* "Interaction.pyx":349
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -10932,7 +10932,7 @@ static PyObject *__pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_U
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":350
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -11795,7 +11795,7 @@ static PyObject *__pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_U
  *     Velocity_Gauge_Int_Hamiltonian.assemblyEnd()
  * 
  *     return Velocity_Gauge_Int_Hamiltonian             # <<<<<<<<<<<<<<
- * def Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(input_par):
+ * def Velocity_Gauge_Right_Circular_Matrix_Lower(input_par):
  *     cdef double h2
  */
   __Pyx_XDECREF(__pyx_r);
@@ -11806,7 +11806,7 @@ static PyObject *__pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_U
   /* "Interaction.pyx":343
  * 
  * 
- * def Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Right_Circular_Matrix_Upper(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
@@ -11820,7 +11820,7 @@ static PyObject *__pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_U
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Right_Circular_Matrix_Upper", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -11840,26 +11840,26 @@ static PyObject *__pyx_pf_11Interaction_24Velocity_Gauge_Right_Circular_Matrix_U
 /* "Interaction.pyx":381
  * 
  *     return Velocity_Gauge_Int_Hamiltonian
- * def Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Right_Circular_Matrix_Lower(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_27Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_27Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block = {"Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block", (PyCFunction)__pyx_pw_11Interaction_27Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_27Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_27Velocity_Gauge_Right_Circular_Matrix_Lower(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_27Velocity_Gauge_Right_Circular_Matrix_Lower = {"Velocity_Gauge_Right_Circular_Matrix_Lower", (PyCFunction)__pyx_pw_11Interaction_27Velocity_Gauge_Right_Circular_Matrix_Lower, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_27Velocity_Gauge_Right_Circular_Matrix_Lower(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Right_Circular_Matrix_Lower (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_Lower(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_Lower(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   double __pyx_v_h2;
   int __pyx_v_l_block;
   int __pyx_v_m_block;
@@ -11891,18 +11891,18 @@ static PyObject *__pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_L
   double __pyx_t_11;
   PyObject *(*__pyx_t_12)(PyObject *);
   int __pyx_t_13;
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block", 0);
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Right_Circular_Matrix_Lower", 0);
 
   /* "Interaction.pyx":386
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 386, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 386, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -11973,7 +11973,7 @@ static PyObject *__pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_L
 
   /* "Interaction.pyx":387
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -12047,7 +12047,7 @@ static PyObject *__pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_L
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":388
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -12897,7 +12897,7 @@ static PyObject *__pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_L
  * 
  *     return Velocity_Gauge_Int_Hamiltonian             # <<<<<<<<<<<<<<
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par):
+ * def Velocity_Gauge_Left_Circular_Matrix_Upper(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_Velocity_Gauge_Int_Hamiltonian);
@@ -12907,7 +12907,7 @@ static PyObject *__pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_L
   /* "Interaction.pyx":381
  * 
  *     return Velocity_Gauge_Int_Hamiltonian
- * def Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Right_Circular_Matrix_Lower(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
@@ -12921,7 +12921,7 @@ static PyObject *__pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_L
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Right_Circular_Matrix_Lower", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -12941,26 +12941,26 @@ static PyObject *__pyx_pf_11Interaction_26Velocity_Gauge_Right_Circular_Matrix_L
 /* "Interaction.pyx":419
  *     return Velocity_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Left_Circular_Matrix_Upper(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_29Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_29Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block = {"Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block", (PyCFunction)__pyx_pw_11Interaction_29Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_29Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_29Velocity_Gauge_Left_Circular_Matrix_Upper(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_29Velocity_Gauge_Left_Circular_Matrix_Upper = {"Velocity_Gauge_Left_Circular_Matrix_Upper", (PyCFunction)__pyx_pw_11Interaction_29Velocity_Gauge_Left_Circular_Matrix_Upper, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_29Velocity_Gauge_Left_Circular_Matrix_Upper(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Left_Circular_Matrix_Upper (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Upper(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Upper(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   double __pyx_v_h2;
   int __pyx_v_l_block;
   int __pyx_v_m_block;
@@ -12992,18 +12992,18 @@ static PyObject *__pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Up
   double __pyx_t_11;
   PyObject *(*__pyx_t_12)(PyObject *);
   int __pyx_t_13;
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block", 0);
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Left_Circular_Matrix_Upper", 0);
 
   /* "Interaction.pyx":424
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 424, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 424, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 424, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -13074,7 +13074,7 @@ static PyObject *__pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Up
 
   /* "Interaction.pyx":425
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -13148,7 +13148,7 @@ static PyObject *__pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Up
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":426
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -14012,7 +14012,7 @@ static PyObject *__pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Up
  *     Velocity_Gauge_Int_Hamiltonian.assemblyEnd()
  *     return Velocity_Gauge_Int_Hamiltonian             # <<<<<<<<<<<<<<
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(input_par):
+ * def Velocity_Gauge_Left_Circular_Matrix_Lower(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_Velocity_Gauge_Int_Hamiltonian);
@@ -14022,7 +14022,7 @@ static PyObject *__pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Up
   /* "Interaction.pyx":419
  *     return Velocity_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Left_Circular_Matrix_Upper(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
@@ -14036,7 +14036,7 @@ static PyObject *__pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Up
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Left_Circular_Matrix_Upper", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -14056,26 +14056,26 @@ static PyObject *__pyx_pf_11Interaction_28Velocity_Gauge_Left_Circular_Matrix_Up
 /* "Interaction.pyx":456
  *     return Velocity_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Left_Circular_Matrix_Lower(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11Interaction_31Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_11Interaction_31Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block = {"Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block", (PyCFunction)__pyx_pw_11Interaction_31Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_11Interaction_31Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_11Interaction_31Velocity_Gauge_Left_Circular_Matrix_Lower(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_11Interaction_31Velocity_Gauge_Left_Circular_Matrix_Lower = {"Velocity_Gauge_Left_Circular_Matrix_Lower", (PyCFunction)__pyx_pw_11Interaction_31Velocity_Gauge_Left_Circular_Matrix_Lower, METH_O, 0};
+static PyObject *__pyx_pw_11Interaction_31Velocity_Gauge_Left_Circular_Matrix_Lower(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_11Interaction_30Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Left_Circular_Matrix_Lower (wrapper)", 0);
+  __pyx_r = __pyx_pf_11Interaction_30Velocity_Gauge_Left_Circular_Matrix_Lower(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11Interaction_30Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_11Interaction_30Velocity_Gauge_Left_Circular_Matrix_Lower(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   double __pyx_v_h2;
   int __pyx_v_l_block;
   int __pyx_v_m_block;
@@ -14107,18 +14107,18 @@ static PyObject *__pyx_pf_11Interaction_30Velocity_Gauge_Left_Circular_Matrix_Lo
   double __pyx_t_11;
   PyObject *(*__pyx_t_12)(PyObject *);
   int __pyx_t_13;
-  __Pyx_RefNannySetupContext("Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block", 0);
+  __Pyx_RefNannySetupContext("Velocity_Gauge_Left_Circular_Matrix_Lower", 0);
 
   /* "Interaction.pyx":461
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 461, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 461, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 461, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -14189,7 +14189,7 @@ static PyObject *__pyx_pf_11Interaction_30Velocity_Gauge_Left_Circular_Matrix_Lo
 
   /* "Interaction.pyx":462
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -14263,7 +14263,7 @@ static PyObject *__pyx_pf_11Interaction_30Velocity_Gauge_Left_Circular_Matrix_Lo
   __pyx_t_1 = 0;
 
   /* "Interaction.pyx":463
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_l_m)
@@ -15120,7 +15120,7 @@ static PyObject *__pyx_pf_11Interaction_30Velocity_Gauge_Left_Circular_Matrix_Lo
   /* "Interaction.pyx":456
  *     return Velocity_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Left_Circular_Matrix_Lower(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
@@ -15134,7 +15134,7 @@ static PyObject *__pyx_pf_11Interaction_30Velocity_Gauge_Left_Circular_Matrix_Lo
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Interaction.Velocity_Gauge_Left_Circular_Matrix_Lower", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -15208,7 +15208,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_Coefficent_Calculator, __pyx_k_Coefficent_Calculator, sizeof(__pyx_k_Coefficent_Calculator), 0, 0, 1, 1},
   {&__pyx_n_s_DIFFERENT_NONZERO_PATTERN, __pyx_k_DIFFERENT_NONZERO_PATTERN, sizeof(__pyx_k_DIFFERENT_NONZERO_PATTERN), 0, 0, 1, 1},
   {&__pyx_n_s_Get_rank, __pyx_k_Get_rank, sizeof(__pyx_k_Get_rank), 0, 0, 1, 1},
-  {&__pyx_n_s_Index_Map_L_Block, __pyx_k_Index_Map_L_Block, sizeof(__pyx_k_Index_Map_L_Block), 0, 0, 1, 1},
+  {&__pyx_n_s_Index_Map, __pyx_k_Index_Map, sizeof(__pyx_k_Index_Map), 0, 0, 1, 1},
   {&__pyx_n_s_Int_Ham_Left, __pyx_k_Int_Ham_Left, sizeof(__pyx_k_Int_Ham_Left), 0, 0, 1, 1},
   {&__pyx_n_s_Int_Ham_Left_Lower, __pyx_k_Int_Ham_Left_Lower, sizeof(__pyx_k_Int_Ham_Left_Lower), 0, 0, 1, 1},
   {&__pyx_n_s_Int_Ham_Lower, __pyx_k_Int_Ham_Lower, sizeof(__pyx_k_Int_Ham_Lower), 0, 0, 1, 1},
@@ -15223,11 +15223,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_Length_Gauge_Right_Circular_Matr, __pyx_k_Length_Gauge_Right_Circular_Matr, sizeof(__pyx_k_Length_Gauge_Right_Circular_Matr), 0, 0, 1, 1},
   {&__pyx_n_s_Length_Gauge_Right_Coeff_Calcula, __pyx_k_Length_Gauge_Right_Coeff_Calcula, sizeof(__pyx_k_Length_Gauge_Right_Coeff_Calcula), 0, 0, 1, 1},
   {&__pyx_n_s_Length_Gauge_X_Coeff_Calculator, __pyx_k_Length_Gauge_X_Coeff_Calculator, sizeof(__pyx_k_Length_Gauge_X_Coeff_Calculator), 0, 0, 1, 1},
-  {&__pyx_n_s_Length_Gauge_X_Matrix_L_Block, __pyx_k_Length_Gauge_X_Matrix_L_Block, sizeof(__pyx_k_Length_Gauge_X_Matrix_L_Block), 0, 0, 1, 1},
+  {&__pyx_n_s_Length_Gauge_X_Matrix, __pyx_k_Length_Gauge_X_Matrix, sizeof(__pyx_k_Length_Gauge_X_Matrix), 0, 0, 1, 1},
   {&__pyx_n_s_Length_Gauge_Y_Coeff_Calculator, __pyx_k_Length_Gauge_Y_Coeff_Calculator, sizeof(__pyx_k_Length_Gauge_Y_Coeff_Calculator), 0, 0, 1, 1},
-  {&__pyx_n_s_Length_Gauge_Y_Matrix_L_Block, __pyx_k_Length_Gauge_Y_Matrix_L_Block, sizeof(__pyx_k_Length_Gauge_Y_Matrix_L_Block), 0, 0, 1, 1},
+  {&__pyx_n_s_Length_Gauge_Y_Matrix, __pyx_k_Length_Gauge_Y_Matrix, sizeof(__pyx_k_Length_Gauge_Y_Matrix), 0, 0, 1, 1},
   {&__pyx_n_s_Length_Gauge_Z_Coeff_Calculator, __pyx_k_Length_Gauge_Z_Coeff_Calculator, sizeof(__pyx_k_Length_Gauge_Z_Coeff_Calculator), 0, 0, 1, 1},
-  {&__pyx_n_s_Length_Gauge_Z_Matrix_L_Block, __pyx_k_Length_Gauge_Z_Matrix_L_Block, sizeof(__pyx_k_Length_Gauge_Z_Matrix_L_Block), 0, 0, 1, 1},
+  {&__pyx_n_s_Length_Gauge_Z_Matrix, __pyx_k_Length_Gauge_Z_Matrix, sizeof(__pyx_k_Length_Gauge_Z_Matrix), 0, 0, 1, 1},
   {&__pyx_n_s_MPI, __pyx_k_MPI, sizeof(__pyx_k_MPI), 0, 0, 1, 1},
   {&__pyx_n_s_Make_Grid, __pyx_k_Make_Grid, sizeof(__pyx_k_Make_Grid), 0, 0, 1, 1},
   {&__pyx_n_s_Mat, __pyx_k_Mat, sizeof(__pyx_k_Mat), 0, 0, 1, 1},
@@ -15244,12 +15244,12 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_Velocity_Gauge_Right_Circular_Ma_2, __pyx_k_Velocity_Gauge_Right_Circular_Ma_2, sizeof(__pyx_k_Velocity_Gauge_Right_Circular_Ma_2), 0, 0, 1, 1},
   {&__pyx_n_s_Velocity_Gauge_Right_Circular_Ma_3, __pyx_k_Velocity_Gauge_Right_Circular_Ma_3, sizeof(__pyx_k_Velocity_Gauge_Right_Circular_Ma_3), 0, 0, 1, 1},
   {&__pyx_n_s_Velocity_Gauge_Rigth_Coeff_Calcu, __pyx_k_Velocity_Gauge_Rigth_Coeff_Calcu, sizeof(__pyx_k_Velocity_Gauge_Rigth_Coeff_Calcu), 0, 0, 1, 1},
-  {&__pyx_n_s_Velocity_Gauge_X_Matrix_L_Block, __pyx_k_Velocity_Gauge_X_Matrix_L_Block, sizeof(__pyx_k_Velocity_Gauge_X_Matrix_L_Block), 0, 0, 1, 1},
-  {&__pyx_n_s_Velocity_Gauge_Y_Matrix_L_Block, __pyx_k_Velocity_Gauge_Y_Matrix_L_Block, sizeof(__pyx_k_Velocity_Gauge_Y_Matrix_L_Block), 0, 0, 1, 1},
+  {&__pyx_n_s_Velocity_Gauge_X_Matrix, __pyx_k_Velocity_Gauge_X_Matrix, sizeof(__pyx_k_Velocity_Gauge_X_Matrix), 0, 0, 1, 1},
+  {&__pyx_n_s_Velocity_Gauge_Y_Matrix, __pyx_k_Velocity_Gauge_Y_Matrix, sizeof(__pyx_k_Velocity_Gauge_Y_Matrix), 0, 0, 1, 1},
   {&__pyx_n_s_Velocity_Gauge_Z_Coeff_Calculato, __pyx_k_Velocity_Gauge_Z_Coeff_Calculato, sizeof(__pyx_k_Velocity_Gauge_Z_Coeff_Calculato), 0, 0, 1, 1},
-  {&__pyx_n_s_Velocity_Gauge_Z_Matrix_L_Block, __pyx_k_Velocity_Gauge_Z_Matrix_L_Block, sizeof(__pyx_k_Velocity_Gauge_Z_Matrix_L_Block), 0, 0, 1, 1},
-  {&__pyx_n_s_Velocity_Gauge_Z_Matrix_Lower_L, __pyx_k_Velocity_Gauge_Z_Matrix_Lower_L, sizeof(__pyx_k_Velocity_Gauge_Z_Matrix_Lower_L), 0, 0, 1, 1},
-  {&__pyx_n_s_Velocity_Gauge_Z_Matrix_Upper_L, __pyx_k_Velocity_Gauge_Z_Matrix_Upper_L, sizeof(__pyx_k_Velocity_Gauge_Z_Matrix_Upper_L), 0, 0, 1, 1},
+  {&__pyx_n_s_Velocity_Gauge_Z_Matrix, __pyx_k_Velocity_Gauge_Z_Matrix, sizeof(__pyx_k_Velocity_Gauge_Z_Matrix), 0, 0, 1, 1},
+  {&__pyx_n_s_Velocity_Gauge_Z_Matrix_Lower, __pyx_k_Velocity_Gauge_Z_Matrix_Lower, sizeof(__pyx_k_Velocity_Gauge_Z_Matrix_Lower), 0, 0, 1, 1},
+  {&__pyx_n_s_Velocity_Gauge_Z_Matrix_Upper, __pyx_k_Velocity_Gauge_Z_Matrix_Upper, sizeof(__pyx_k_Velocity_Gauge_Z_Matrix_Upper), 0, 0, 1, 1},
   {&__pyx_n_s_append, __pyx_k_append, sizeof(__pyx_k_append), 0, 0, 1, 1},
   {&__pyx_n_s_argv, __pyx_k_argv, sizeof(__pyx_k_argv), 0, 0, 1, 1},
   {&__pyx_n_s_assemblyBegin, __pyx_k_assemblyBegin, sizeof(__pyx_k_assemblyBegin), 0, 0, 1, 1},
@@ -15320,43 +15320,43 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "Interaction.pyx":19
  * 
  * 
- * def Length_Gauge_Z_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Z_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef double factor
  */
   __pyx_tuple_ = PyTuple_Pack(17, __pyx_n_s_input_par, __pyx_n_s_factor, __pyx_n_s_l_block, __pyx_n_s_m_block, __pyx_n_s_grid_idx, __pyx_n_s_col_idx, __pyx_n_s_grid_size, __pyx_n_s_index_map_l_m, __pyx_n_s_index_map_box, __pyx_n_s_grid, __pyx_n_s_matrix_size, __pyx_n_s_Length_Gauge_Int_Hamiltonian, __pyx_n_s_istart, __pyx_n_s_iend, __pyx_n_s_Coeff_Upper, __pyx_n_s_Coeff_Lower, __pyx_n_s_i); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(1, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Length_Gauge_Z_Matrix_L_Block, 19, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(1, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Length_Gauge_Z_Matrix, 19, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 19, __pyx_L1_error)
 
   /* "Interaction.pyx":53
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_X_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_X_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
   __pyx_tuple__3 = PyTuple_Pack(20, __pyx_n_s_input_par, __pyx_n_s_l_block, __pyx_n_s_m_block, __pyx_n_s_l_prime, __pyx_n_s_m_prime, __pyx_n_s_columon_idx, __pyx_n_s_grid_idx, __pyx_n_s_grid_size, __pyx_n_s_index_map_l_m, __pyx_n_s_index_map_box, __pyx_n_s_grid, __pyx_n_s_matrix_size, __pyx_n_s_Length_Gauge_Int_Hamiltonian, __pyx_n_s_istart, __pyx_n_s_iend, __pyx_n_s_Coeff_Plus_Plus, __pyx_n_s_Coeff_Minus_Plus, __pyx_n_s_Coeff_Plus_Minus, __pyx_n_s_Coeff_Minus_Minus, __pyx_n_s_i); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 53, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(1, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Length_Gauge_X_Matrix_L_Block, 53, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 53, __pyx_L1_error)
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(1, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Length_Gauge_X_Matrix, 53, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 53, __pyx_L1_error)
 
   /* "Interaction.pyx":101
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_Y_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Y_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
   __pyx_tuple__5 = PyTuple_Pack(20, __pyx_n_s_input_par, __pyx_n_s_l_block, __pyx_n_s_m_block, __pyx_n_s_l_prime, __pyx_n_s_m_prime, __pyx_n_s_columon_idx, __pyx_n_s_grid_idx, __pyx_n_s_grid_size, __pyx_n_s_index_map_l_m, __pyx_n_s_index_map_box, __pyx_n_s_grid, __pyx_n_s_matrix_size, __pyx_n_s_Length_Gauge_Int_Hamiltonian, __pyx_n_s_istart, __pyx_n_s_iend, __pyx_n_s_Coeff_Plus_Plus, __pyx_n_s_Coeff_Minus_Plus, __pyx_n_s_Coeff_Plus_Minus, __pyx_n_s_Coeff_Minus_Minus, __pyx_n_s_i); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
-  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(1, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Length_Gauge_Y_Matrix_L_Block, 101, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(1, 0, 20, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Length_Gauge_Y_Matrix, 101, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 101, __pyx_L1_error)
 
   /* "Interaction.pyx":149
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_Right_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Right_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
@@ -15368,7 +15368,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "Interaction.pyx":192
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_Left_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Left_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
@@ -15380,45 +15380,45 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "Interaction.pyx":235
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Z_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
- *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par)
- *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par)
+ * def Velocity_Gauge_Z_Matrix(input_par):             # <<<<<<<<<<<<<<
+ *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper(input_par)
+ *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower(input_par)
  */
   __pyx_tuple__11 = PyTuple_Pack(3, __pyx_n_s_input_par, __pyx_n_s_Int_Ham_Upper, __pyx_n_s_Int_Ham_Lower); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 235, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
-  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Velocity_Gauge_Z_Matrix_L_Block, 235, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Velocity_Gauge_Z_Matrix, 235, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 235, __pyx_L1_error)
 
   /* "Interaction.pyx":241
  *     return Int_Ham_Upper
  * 
- * def Velocity_Gauge_X_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ * def Velocity_Gauge_X_Matrix(input_par):             # <<<<<<<<<<<<<<
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  */
   __pyx_tuple__13 = PyTuple_Pack(3, __pyx_n_s_input_par, __pyx_n_s_Int_Ham_Right, __pyx_n_s_Int_Ham_Left); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 241, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
-  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Velocity_Gauge_X_Matrix_L_Block, 241, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 241, __pyx_L1_error)
+  __pyx_codeobj__14 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__13, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Velocity_Gauge_X_Matrix, 241, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__14)) __PYX_ERR(0, 241, __pyx_L1_error)
 
   /* "Interaction.pyx":248
  *     return Int_Ham_Right
  * 
- * def Velocity_Gauge_Y_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ * def Velocity_Gauge_Y_Matrix(input_par):             # <<<<<<<<<<<<<<
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  */
   __pyx_tuple__15 = PyTuple_Pack(3, __pyx_n_s_input_par, __pyx_n_s_Int_Ham_Right, __pyx_n_s_Int_Ham_Left); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
-  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Velocity_Gauge_Y_Matrix_L_Block, 248, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 248, __pyx_L1_error)
+  __pyx_codeobj__16 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__15, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Velocity_Gauge_Y_Matrix, 248, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__16)) __PYX_ERR(0, 248, __pyx_L1_error)
 
   /* "Interaction.pyx":256
  * 
  * 
- * def Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Right_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par)
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper(input_par)
  */
   __pyx_tuple__17 = PyTuple_Pack(3, __pyx_n_s_input_par, __pyx_n_s_Int_Ham_Right, __pyx_n_s_Int_Ham_Right_Lower); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 256, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
@@ -15428,9 +15428,9 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "Interaction.pyx":264
  *     return Int_Ham_Right
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Left_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper(input_par)
  */
   __pyx_tuple__19 = PyTuple_Pack(3, __pyx_n_s_input_par, __pyx_n_s_Int_Ham_Left, __pyx_n_s_Int_Ham_Left_Lower); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
@@ -15440,31 +15440,31 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "Interaction.pyx":272
  *     return Int_Ham_Left
  * 
- * def Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Z_Matrix_Upper(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  */
   __pyx_tuple__21 = PyTuple_Pack(17, __pyx_n_s_input_par, __pyx_n_s_h2, __pyx_n_s_l_block, __pyx_n_s_m_block, __pyx_n_s_grid_idx, __pyx_n_s_col_idx, __pyx_n_s_grid_size, __pyx_n_s_index_map_l_m, __pyx_n_s_index_map_box, __pyx_n_s_grid, __pyx_n_s_matrix_size, __pyx_n_s_Velocity_Gauge_Int_Hamiltonian, __pyx_n_s_istart, __pyx_n_s_iend, __pyx_n_s_Coeff_Upper, __pyx_n_s_Coeff_Lower, __pyx_n_s_i); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 272, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
-  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Velocity_Gauge_Z_Matrix_Upper_L, 272, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 272, __pyx_L1_error)
+  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(1, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Velocity_Gauge_Z_Matrix_Upper, 272, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 272, __pyx_L1_error)
 
   /* "Interaction.pyx":307
  *     return Velocity_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Z_Matrix_Lower(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  */
   __pyx_tuple__23 = PyTuple_Pack(17, __pyx_n_s_input_par, __pyx_n_s_h2, __pyx_n_s_l_block, __pyx_n_s_m_block, __pyx_n_s_grid_idx, __pyx_n_s_col_idx, __pyx_n_s_grid_size, __pyx_n_s_index_map_l_m, __pyx_n_s_index_map_box, __pyx_n_s_grid, __pyx_n_s_matrix_size, __pyx_n_s_Velocity_Gauge_Int_Hamiltonian, __pyx_n_s_istart, __pyx_n_s_iend, __pyx_n_s_Coeff_Upper, __pyx_n_s_Coeff_Lower, __pyx_n_s_i); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 307, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(1, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Velocity_Gauge_Z_Matrix_Lower_L, 307, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(1, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_Interaction_pyx, __pyx_n_s_Velocity_Gauge_Z_Matrix_Lower, 307, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 307, __pyx_L1_error)
 
   /* "Interaction.pyx":343
  * 
  * 
- * def Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Right_Circular_Matrix_Upper(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
@@ -15476,7 +15476,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "Interaction.pyx":381
  * 
  *     return Velocity_Gauge_Int_Hamiltonian
- * def Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Right_Circular_Matrix_Lower(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
@@ -15488,7 +15488,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "Interaction.pyx":419
  *     return Velocity_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Left_Circular_Matrix_Upper(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
@@ -15500,7 +15500,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "Interaction.pyx":456
  *     return Velocity_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Left_Circular_Matrix_Lower(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
@@ -16042,47 +16042,47 @@ if (!__Pyx_RefNanny) {
   /* "Interaction.pyx":19
  * 
  * 
- * def Length_Gauge_Z_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Z_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef double factor
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_1Length_Gauge_Z_Matrix_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_1Length_Gauge_Z_Matrix, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Length_Gauge_Z_Matrix_L_Block, __pyx_t_5) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Length_Gauge_Z_Matrix, __pyx_t_5) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "Interaction.pyx":53
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_X_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_X_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_3Length_Gauge_X_Matrix_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 53, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_3Length_Gauge_X_Matrix, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 53, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Length_Gauge_X_Matrix_L_Block, __pyx_t_5) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Length_Gauge_X_Matrix, __pyx_t_5) < 0) __PYX_ERR(0, 53, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "Interaction.pyx":101
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_Y_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Y_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_5Length_Gauge_Y_Matrix_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_5Length_Gauge_Y_Matrix, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Length_Gauge_Y_Matrix_L_Block, __pyx_t_5) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Length_Gauge_Y_Matrix, __pyx_t_5) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "Interaction.pyx":149
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_Right_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Right_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_7Length_Gauge_Right_Circular_Matrix_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 149, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_7Length_Gauge_Right_Circular_Matrix, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Length_Gauge_Right_Circular_Matr, __pyx_t_5) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -16090,11 +16090,11 @@ if (!__Pyx_RefNanny) {
   /* "Interaction.pyx":192
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Length_Gauge_Left_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Length_Gauge_Left_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef int l_block, m_block, l_prime, m_prime, columon_idx, grid_idx, grid_size
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_9Length_Gauge_Left_Circular_Matrix_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_9Length_Gauge_Left_Circular_Matrix, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Length_Gauge_Left_Circular_Matri, __pyx_t_5) < 0) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -16102,47 +16102,47 @@ if (!__Pyx_RefNanny) {
   /* "Interaction.pyx":235
  *     return Length_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Z_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
- *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par)
- *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par)
+ * def Velocity_Gauge_Z_Matrix(input_par):             # <<<<<<<<<<<<<<
+ *     Int_Ham_Upper = Velocity_Gauge_Z_Matrix_Upper(input_par)
+ *     Int_Ham_Lower = Velocity_Gauge_Z_Matrix_Lower(input_par)
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_11Velocity_Gauge_Z_Matrix_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 235, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_11Velocity_Gauge_Z_Matrix, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 235, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Z_Matrix_L_Block, __pyx_t_5) < 0) __PYX_ERR(0, 235, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Z_Matrix, __pyx_t_5) < 0) __PYX_ERR(0, 235, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "Interaction.pyx":241
  *     return Int_Ham_Upper
  * 
- * def Velocity_Gauge_X_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ * def Velocity_Gauge_X_Matrix(input_par):             # <<<<<<<<<<<<<<
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_13Velocity_Gauge_X_Matrix_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 241, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_13Velocity_Gauge_X_Matrix, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 241, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_X_Matrix_L_Block, __pyx_t_5) < 0) __PYX_ERR(0, 241, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_X_Matrix, __pyx_t_5) < 0) __PYX_ERR(0, 241, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "Interaction.pyx":248
  *     return Int_Ham_Right
  * 
- * def Velocity_Gauge_Y_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par)
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par)
+ * def Velocity_Gauge_Y_Matrix(input_par):             # <<<<<<<<<<<<<<
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix(input_par)
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_15Velocity_Gauge_Y_Matrix_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 248, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_15Velocity_Gauge_Y_Matrix, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Y_Matrix_L_Block, __pyx_t_5) < 0) __PYX_ERR(0, 248, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Y_Matrix, __pyx_t_5) < 0) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "Interaction.pyx":256
  * 
  * 
- * def Velocity_Gauge_Right_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Right_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
- *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par)
+ *     Int_Ham_Right = Velocity_Gauge_Right_Circular_Matrix_Upper(input_par)
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_17Velocity_Gauge_Right_Circular_Matrix_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 256, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_17Velocity_Gauge_Right_Circular_Matrix, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 256, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Right_Circular_Ma, __pyx_t_5) < 0) __PYX_ERR(0, 256, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -16150,11 +16150,11 @@ if (!__Pyx_RefNanny) {
   /* "Interaction.pyx":264
  *     return Int_Ham_Right
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Left_Circular_Matrix(input_par):             # <<<<<<<<<<<<<<
  * 
- *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par)
+ *     Int_Ham_Left = Velocity_Gauge_Left_Circular_Matrix_Upper(input_par)
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_19Velocity_Gauge_Left_Circular_Matrix_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_19Velocity_Gauge_Left_Circular_Matrix, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Left_Circular_Mat, __pyx_t_5) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -16162,35 +16162,35 @@ if (!__Pyx_RefNanny) {
   /* "Interaction.pyx":272
  *     return Int_Ham_Left
  * 
- * def Velocity_Gauge_Z_Matrix_Upper_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Z_Matrix_Upper(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_21Velocity_Gauge_Z_Matrix_Upper_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 272, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_21Velocity_Gauge_Z_Matrix_Upper, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 272, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Z_Matrix_Upper_L, __pyx_t_5) < 0) __PYX_ERR(0, 272, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Z_Matrix_Upper, __pyx_t_5) < 0) __PYX_ERR(0, 272, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "Interaction.pyx":307
  *     return Velocity_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Z_Matrix_Lower_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Z_Matrix_Lower(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef int l_block, m_block, grid_idx, col_idx, grid_size
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_23Velocity_Gauge_Z_Matrix_Lower_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_23Velocity_Gauge_Z_Matrix_Lower, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 307, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Z_Matrix_Lower_L, __pyx_t_5) < 0) __PYX_ERR(0, 307, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Z_Matrix_Lower, __pyx_t_5) < 0) __PYX_ERR(0, 307, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "Interaction.pyx":343
  * 
  * 
- * def Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Right_Circular_Matrix_Upper(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_25Velocity_Gauge_Right_Circular_Matrix_Upper_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_25Velocity_Gauge_Right_Circular_Matrix_Upper, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 343, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Right_Circular_Ma_2, __pyx_t_5) < 0) __PYX_ERR(0, 343, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -16198,11 +16198,11 @@ if (!__Pyx_RefNanny) {
   /* "Interaction.pyx":381
  * 
  *     return Velocity_Gauge_Int_Hamiltonian
- * def Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Right_Circular_Matrix_Lower(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_27Velocity_Gauge_Right_Circular_Matrix_Lower_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_27Velocity_Gauge_Right_Circular_Matrix_Lower, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 381, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Right_Circular_Ma_3, __pyx_t_5) < 0) __PYX_ERR(0, 381, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -16210,11 +16210,11 @@ if (!__Pyx_RefNanny) {
   /* "Interaction.pyx":419
  *     return Velocity_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Left_Circular_Matrix_Upper(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_29Velocity_Gauge_Left_Circular_Matrix_Upper_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 419, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_29Velocity_Gauge_Left_Circular_Matrix_Upper, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 419, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Left_Circular_Mat_2, __pyx_t_5) < 0) __PYX_ERR(0, 419, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -16222,11 +16222,11 @@ if (!__Pyx_RefNanny) {
   /* "Interaction.pyx":456
  *     return Velocity_Gauge_Int_Hamiltonian
  * 
- * def Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Velocity_Gauge_Left_Circular_Matrix_Lower(input_par):             # <<<<<<<<<<<<<<
  *     cdef double h2
  *     cdef complex factor
  */
-  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_31Velocity_Gauge_Left_Circular_Matrix_Lower_L_Block, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 456, __pyx_L1_error)
+  __pyx_t_5 = PyCFunction_NewEx(&__pyx_mdef_11Interaction_31Velocity_Gauge_Left_Circular_Matrix_Lower, NULL, __pyx_n_s_Interaction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 456, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Velocity_Gauge_Left_Circular_Mat_3, __pyx_t_5) < 0) __PYX_ERR(0, 456, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;

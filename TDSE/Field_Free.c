@@ -1465,6 +1465,7 @@ static const char __pyx_k_Velocity[] = "Velocity";
 static const char __pyx_k_grid_idx[] = "grid_idx";
 static const char __pyx_k_petsc4py[] = "petsc4py";
 static const char __pyx_k_setValue[] = "setValue";
+static const char __pyx_k_Index_Map[] = "Index_Map";
 static const char __pyx_k_Make_Grid[] = "Make_Grid";
 static const char __pyx_k_Potential[] = "Potential";
 static const char __pyx_k_Structure[] = "Structure";
@@ -1487,7 +1488,6 @@ static const char __pyx_k_index_map_l_m[] = "index_map_l_m";
 static const char __pyx_k_FF_Hamiltonian[] = "FF_Hamiltonian";
 static const char __pyx_k_Field_Free_pyx[] = "Field_Free.pyx";
 static const char __pyx_k_Full_Hamiltonian[] = "Full_Hamiltonian";
-static const char __pyx_k_Index_Map_L_Block[] = "Index_Map_L_Block";
 static const char __pyx_k_Int_Hamiltonian_x[] = "Int_Hamiltonian_x";
 static const char __pyx_k_Int_Hamiltonian_y[] = "Int_Hamiltonian_y";
 static const char __pyx_k_Int_Hamiltonian_z[] = "Int_Hamiltonian_z";
@@ -1499,10 +1499,10 @@ static const char __pyx_k_Right_Circular_Matrix[] = "Right_Circular_Matrix";
 static const char __pyx_k_Build_Full_Hamiltonian[] = "Build_Full_Hamiltonian";
 static const char __pyx_k_DIFFERENT_NONZERO_PATTERN[] = "DIFFERENT_NONZERO_PATTERN";
 static const char __pyx_k_No_ECS_applied_for_this_run[] = "No ECS applied for this run \n";
-static const char __pyx_k_Build_FF_Hamiltonian_Fourth_Orde[] = "Build_FF_Hamiltonian_Fourth_Order_L_Block.<locals>.Fourth_Order_Stencil";
-static const char __pyx_k_Build_FF_Hamiltonian_Second_Orde[] = "Build_FF_Hamiltonian_Second_Order_L_Block";
+static const char __pyx_k_Build_FF_Hamiltonian_Fourth_Orde[] = "Build_FF_Hamiltonian_Fourth_Order.<locals>.Fourth_Order_Stencil";
+static const char __pyx_k_Build_FF_Hamiltonian_Second_Orde[] = "Build_FF_Hamiltonian_Second_Order";
 static const char __pyx_k_ECS_region_has_to_be_between_0_0[] = "ECS region has to be between 0.0 and 1.00\n";
-static const char __pyx_k_Build_FF_Hamiltonian_Fourth_Orde_2[] = "Build_FF_Hamiltonian_Fourth_Order_L_Block";
+static const char __pyx_k_Build_FF_Hamiltonian_Fourth_Orde_2[] = "Build_FF_Hamiltonian_Fourth_Order";
 static PyObject *__pyx_n_s_Build_FF_Hamiltonian_Fourth_Orde;
 static PyObject *__pyx_n_s_Build_FF_Hamiltonian_Fourth_Orde_2;
 static PyObject *__pyx_n_s_Build_FF_Hamiltonian_Second_Orde;
@@ -1520,7 +1520,7 @@ static PyObject *__pyx_kp_s_Field_Free_pyx;
 static PyObject *__pyx_n_s_Fourth_Order_Stencil;
 static PyObject *__pyx_n_s_Full_Hamiltonian;
 static PyObject *__pyx_n_s_Get_rank;
-static PyObject *__pyx_n_s_Index_Map_L_Block;
+static PyObject *__pyx_n_s_Index_Map;
 static PyObject *__pyx_n_s_Int_Hamiltonian_x;
 static PyObject *__pyx_n_s_Int_Hamiltonian_y;
 static PyObject *__pyx_n_s_Int_Hamiltonian_z;
@@ -1604,9 +1604,9 @@ static PyObject *__pyx_n_s_x_2;
 static PyObject *__pyx_n_s_x__1;
 static PyObject *__pyx_n_s_x__2;
 static PyObject *__pyx_n_s_zeros;
-static PyObject *__pyx_pf_10Field_Free_41Build_FF_Hamiltonian_Fourth_Order_L_Block_Fourth_Order_Stencil(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
-static PyObject *__pyx_pf_10Field_Free_2Build_FF_Hamiltonian_Second_Order_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_10Field_Free_33Build_FF_Hamiltonian_Fourth_Order_Fourth_Order_Stencil(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
+static PyObject *__pyx_pf_10Field_Free_2Build_FF_Hamiltonian_Second_Order(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par); /* proto */
 static PyObject *__pyx_pf_10Field_Free_4Build_Full_Hamiltonian(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_FF_Hamiltonian, PyObject *__pyx_v_Int_Hamiltonian_x, PyObject *__pyx_v_Int_Hamiltonian_y, PyObject *__pyx_v_Int_Hamiltonian_z, PyObject *__pyx_v_Right_Circular_Matrix, PyObject *__pyx_v_Left_Circular_Matrix, PyObject *__pyx_v_input_par); /* proto */
 static PyObject *__pyx_float_0_0;
 static PyObject *__pyx_float_4_0;
@@ -1636,19 +1636,19 @@ static PyObject *__pyx_codeobj__8;
 /* "Field_Free.pyx":18
  *     rank = comm.Get_rank()
  * 
- * def Build_FF_Hamiltonian_Fourth_Order_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Build_FF_Hamiltonian_Fourth_Order(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef float h2
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10Field_Free_1Build_FF_Hamiltonian_Fourth_Order_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_10Field_Free_1Build_FF_Hamiltonian_Fourth_Order_L_Block = {"Build_FF_Hamiltonian_Fourth_Order_L_Block", (PyCFunction)__pyx_pw_10Field_Free_1Build_FF_Hamiltonian_Fourth_Order_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_10Field_Free_1Build_FF_Hamiltonian_Fourth_Order_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_10Field_Free_1Build_FF_Hamiltonian_Fourth_Order(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_10Field_Free_1Build_FF_Hamiltonian_Fourth_Order = {"Build_FF_Hamiltonian_Fourth_Order", (PyCFunction)__pyx_pw_10Field_Free_1Build_FF_Hamiltonian_Fourth_Order, METH_O, 0};
+static PyObject *__pyx_pw_10Field_Free_1Build_FF_Hamiltonian_Fourth_Order(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Build_FF_Hamiltonian_Fourth_Order_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Build_FF_Hamiltonian_Fourth_Order (wrapper)", 0);
+  __pyx_r = __pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
@@ -1664,20 +1664,20 @@ static PyObject *__pyx_pw_10Field_Free_1Build_FF_Hamiltonian_Fourth_Order_L_Bloc
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10Field_Free_41Build_FF_Hamiltonian_Fourth_Order_L_Block_1Fourth_Order_Stencil(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_10Field_Free_41Build_FF_Hamiltonian_Fourth_Order_L_Block_1Fourth_Order_Stencil = {"Fourth_Order_Stencil", (PyCFunction)__pyx_pw_10Field_Free_41Build_FF_Hamiltonian_Fourth_Order_L_Block_1Fourth_Order_Stencil, METH_NOARGS, 0};
-static PyObject *__pyx_pw_10Field_Free_41Build_FF_Hamiltonian_Fourth_Order_L_Block_1Fourth_Order_Stencil(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_10Field_Free_33Build_FF_Hamiltonian_Fourth_Order_1Fourth_Order_Stencil(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_10Field_Free_33Build_FF_Hamiltonian_Fourth_Order_1Fourth_Order_Stencil = {"Fourth_Order_Stencil", (PyCFunction)__pyx_pw_10Field_Free_33Build_FF_Hamiltonian_Fourth_Order_1Fourth_Order_Stencil, METH_NOARGS, 0};
+static PyObject *__pyx_pw_10Field_Free_33Build_FF_Hamiltonian_Fourth_Order_1Fourth_Order_Stencil(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("Fourth_Order_Stencil (wrapper)", 0);
-  __pyx_r = __pyx_pf_10Field_Free_41Build_FF_Hamiltonian_Fourth_Order_L_Block_Fourth_Order_Stencil(__pyx_self);
+  __pyx_r = __pyx_pf_10Field_Free_33Build_FF_Hamiltonian_Fourth_Order_Fourth_Order_Stencil(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10Field_Free_41Build_FF_Hamiltonian_Fourth_Order_L_Block_Fourth_Order_Stencil(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_10Field_Free_33Build_FF_Hamiltonian_Fourth_Order_Fourth_Order_Stencil(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_v_x_2 = NULL;
   PyObject *__pyx_v_x_1 = NULL;
   PyObject *__pyx_v_x = NULL;
@@ -2145,7 +2145,7 @@ static PyObject *__pyx_pf_10Field_Free_41Build_FF_Hamiltonian_Fourth_Order_L_Blo
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("Field_Free.Build_FF_Hamiltonian_Fourth_Order_L_Block.Fourth_Order_Stencil", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Field_Free.Build_FF_Hamiltonian_Fourth_Order.Fourth_Order_Stencil", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_x_2);
@@ -2161,12 +2161,12 @@ static PyObject *__pyx_pf_10Field_Free_41Build_FF_Hamiltonian_Fourth_Order_L_Blo
 /* "Field_Free.pyx":18
  *     rank = comm.Get_rank()
  * 
- * def Build_FF_Hamiltonian_Fourth_Order_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Build_FF_Hamiltonian_Fourth_Order(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef float h2
  */
 
-static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   float __pyx_v_h2;
   int __pyx_v_grid_size;
   int __pyx_v_ECS;
@@ -2207,18 +2207,18 @@ static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order_L_Block
   __pyx_t_double_complex __pyx_t_17;
   __pyx_t_double_complex __pyx_t_18;
   long __pyx_t_19;
-  __Pyx_RefNannySetupContext("Build_FF_Hamiltonian_Fourth_Order_L_Block", 0);
+  __Pyx_RefNannySetupContext("Build_FF_Hamiltonian_Fourth_Order", 0);
 
   /* "Field_Free.pyx":23
  *     cdef int grid_size, ECS, l_block, grid_idx, ECS_idx
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -2289,7 +2289,7 @@ static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order_L_Block
 
   /* "Field_Free.pyx":24
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_box)
@@ -2363,7 +2363,7 @@ static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order_L_Block
   __pyx_t_1 = 0;
 
   /* "Field_Free.pyx":25
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_box)
@@ -2614,7 +2614,7 @@ static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order_L_Block
  *         x_2 = 0.25*(2j - 3*np.exp(3j*pi/4)) / (1 + 2j + 3*np.exp(1j*pi/4))
  *         x_1 = (-2j + 6*np.exp(3j*pi/4)) / (2 + 1j + 3*np.exp(1j*pi/4))
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10Field_Free_41Build_FF_Hamiltonian_Fourth_Order_L_Block_1Fourth_Order_Stencil, 0, __pyx_n_s_Build_FF_Hamiltonian_Fourth_Orde, NULL, __pyx_n_s_Field_Free, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10Field_Free_33Build_FF_Hamiltonian_Fourth_Order_1Fourth_Order_Stencil, 0, __pyx_n_s_Build_FF_Hamiltonian_Fourth_Orde, NULL, __pyx_n_s_Field_Free, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_Fourth_Order_Stencil = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -2626,7 +2626,7 @@ static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order_L_Block
  * 
  *     potential = np.zeros(shape=(input_par["l_max"] + 1, grid_size))
  */
-  __pyx_t_1 = __pyx_pf_10Field_Free_41Build_FF_Hamiltonian_Fourth_Order_L_Block_Fourth_Order_Stencil(__pyx_v_Fourth_Order_Stencil); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
+  __pyx_t_1 = __pyx_pf_10Field_Free_33Build_FF_Hamiltonian_Fourth_Order_Fourth_Order_Stencil(__pyx_v_Fourth_Order_Stencil); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_ECS_Stencil = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5345,7 +5345,7 @@ static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order_L_Block
  *     FF_Hamiltonian.assemblyEnd()
  *     return FF_Hamiltonian             # <<<<<<<<<<<<<<
  * 
- * def Build_FF_Hamiltonian_Second_Order_L_Block(input_par):
+ * def Build_FF_Hamiltonian_Second_Order(input_par):
  */
   __Pyx_XDECREF(__pyx_r);
   __Pyx_INCREF(__pyx_v_FF_Hamiltonian);
@@ -5355,7 +5355,7 @@ static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order_L_Block
   /* "Field_Free.pyx":18
  *     rank = comm.Get_rank()
  * 
- * def Build_FF_Hamiltonian_Fourth_Order_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Build_FF_Hamiltonian_Fourth_Order(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef float h2
  */
@@ -5369,7 +5369,7 @@ static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order_L_Block
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("Field_Free.Build_FF_Hamiltonian_Fourth_Order_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Field_Free.Build_FF_Hamiltonian_Fourth_Order", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -5392,26 +5392,26 @@ static PyObject *__pyx_pf_10Field_Free_Build_FF_Hamiltonian_Fourth_Order_L_Block
 /* "Field_Free.pyx":113
  *     return FF_Hamiltonian
  * 
- * def Build_FF_Hamiltonian_Second_Order_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Build_FF_Hamiltonian_Second_Order(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef double h2
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10Field_Free_3Build_FF_Hamiltonian_Second_Order_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
-static PyMethodDef __pyx_mdef_10Field_Free_3Build_FF_Hamiltonian_Second_Order_L_Block = {"Build_FF_Hamiltonian_Second_Order_L_Block", (PyCFunction)__pyx_pw_10Field_Free_3Build_FF_Hamiltonian_Second_Order_L_Block, METH_O, 0};
-static PyObject *__pyx_pw_10Field_Free_3Build_FF_Hamiltonian_Second_Order_L_Block(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pw_10Field_Free_3Build_FF_Hamiltonian_Second_Order(PyObject *__pyx_self, PyObject *__pyx_v_input_par); /*proto*/
+static PyMethodDef __pyx_mdef_10Field_Free_3Build_FF_Hamiltonian_Second_Order = {"Build_FF_Hamiltonian_Second_Order", (PyCFunction)__pyx_pw_10Field_Free_3Build_FF_Hamiltonian_Second_Order, METH_O, 0};
+static PyObject *__pyx_pw_10Field_Free_3Build_FF_Hamiltonian_Second_Order(PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("Build_FF_Hamiltonian_Second_Order_L_Block (wrapper)", 0);
-  __pyx_r = __pyx_pf_10Field_Free_2Build_FF_Hamiltonian_Second_Order_L_Block(__pyx_self, ((PyObject *)__pyx_v_input_par));
+  __Pyx_RefNannySetupContext("Build_FF_Hamiltonian_Second_Order (wrapper)", 0);
+  __pyx_r = __pyx_pf_10Field_Free_2Build_FF_Hamiltonian_Second_Order(__pyx_self, ((PyObject *)__pyx_v_input_par));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10Field_Free_2Build_FF_Hamiltonian_Second_Order_L_Block(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
+static PyObject *__pyx_pf_10Field_Free_2Build_FF_Hamiltonian_Second_Order(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_input_par) {
   double __pyx_v_h2;
   int __pyx_v_grid_size;
   int __pyx_v_l_block;
@@ -5449,18 +5449,18 @@ static PyObject *__pyx_pf_10Field_Free_2Build_FF_Hamiltonian_Second_Order_L_Bloc
   PyObject *__pyx_t_18 = NULL;
   PyObject *__pyx_t_19 = NULL;
   PyObject *__pyx_t_20 = NULL;
-  __Pyx_RefNannySetupContext("Build_FF_Hamiltonian_Second_Order_L_Block", 0);
+  __Pyx_RefNannySetupContext("Build_FF_Hamiltonian_Second_Order", 0);
 
   /* "Field_Free.pyx":118
  *     cdef int grid_size, l_block, grid_idx, ECS_idx
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)             # <<<<<<<<<<<<<<
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)             # <<<<<<<<<<<<<<
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size
  */
   __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_Mod); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 118, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map_L_Block); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Index_Map); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 118, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -5531,7 +5531,7 @@ static PyObject *__pyx_pf_10Field_Free_2Build_FF_Hamiltonian_Second_Order_L_Bloc
 
   /* "Field_Free.pyx":119
  * 
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])             # <<<<<<<<<<<<<<
  *     grid_size = grid.size
  *     matrix_size = grid_size * len(index_map_box)
@@ -5605,7 +5605,7 @@ static PyObject *__pyx_pf_10Field_Free_2Build_FF_Hamiltonian_Second_Order_L_Bloc
   __pyx_t_1 = 0;
 
   /* "Field_Free.pyx":120
- *     index_map_l_m, index_map_box = Mod.Index_Map_L_Block(input_par)
+ *     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
  *     grid = Mod.Make_Grid(input_par["grid_spacing"], input_par["grid_size"], input_par["grid_spacing"])
  *     grid_size = grid.size             # <<<<<<<<<<<<<<
  *     matrix_size = grid_size * len(index_map_box)
@@ -7358,7 +7358,7 @@ static PyObject *__pyx_pf_10Field_Free_2Build_FF_Hamiltonian_Second_Order_L_Bloc
   /* "Field_Free.pyx":113
  *     return FF_Hamiltonian
  * 
- * def Build_FF_Hamiltonian_Second_Order_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Build_FF_Hamiltonian_Second_Order(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef double h2
  */
@@ -7375,7 +7375,7 @@ static PyObject *__pyx_pf_10Field_Free_2Build_FF_Hamiltonian_Second_Order_L_Bloc
   __Pyx_XDECREF(__pyx_t_18);
   __Pyx_XDECREF(__pyx_t_19);
   __Pyx_XDECREF(__pyx_t_20);
-  __Pyx_AddTraceback("Field_Free.Build_FF_Hamiltonian_Second_Order_L_Block", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("Field_Free.Build_FF_Hamiltonian_Second_Order", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_index_map_l_m);
@@ -8223,7 +8223,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_Fourth_Order_Stencil, __pyx_k_Fourth_Order_Stencil, sizeof(__pyx_k_Fourth_Order_Stencil), 0, 0, 1, 1},
   {&__pyx_n_s_Full_Hamiltonian, __pyx_k_Full_Hamiltonian, sizeof(__pyx_k_Full_Hamiltonian), 0, 0, 1, 1},
   {&__pyx_n_s_Get_rank, __pyx_k_Get_rank, sizeof(__pyx_k_Get_rank), 0, 0, 1, 1},
-  {&__pyx_n_s_Index_Map_L_Block, __pyx_k_Index_Map_L_Block, sizeof(__pyx_k_Index_Map_L_Block), 0, 0, 1, 1},
+  {&__pyx_n_s_Index_Map, __pyx_k_Index_Map, sizeof(__pyx_k_Index_Map), 0, 0, 1, 1},
   {&__pyx_n_s_Int_Hamiltonian_x, __pyx_k_Int_Hamiltonian_x, sizeof(__pyx_k_Int_Hamiltonian_x), 0, 0, 1, 1},
   {&__pyx_n_s_Int_Hamiltonian_y, __pyx_k_Int_Hamiltonian_y, sizeof(__pyx_k_Int_Hamiltonian_y), 0, 0, 1, 1},
   {&__pyx_n_s_Int_Hamiltonian_z, __pyx_k_Int_Hamiltonian_z, sizeof(__pyx_k_Int_Hamiltonian_z), 0, 0, 1, 1},
@@ -8338,7 +8338,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "Field_Free.pyx":18
  *     rank = comm.Get_rank()
  * 
- * def Build_FF_Hamiltonian_Fourth_Order_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Build_FF_Hamiltonian_Fourth_Order(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef float h2
  */
@@ -8350,7 +8350,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "Field_Free.pyx":113
  *     return FF_Hamiltonian
  * 
- * def Build_FF_Hamiltonian_Second_Order_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Build_FF_Hamiltonian_Second_Order(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef double h2
  */
@@ -8876,7 +8876,7 @@ if (!__Pyx_RefNanny) {
  *     comm = MPI.COMM_WORLD
  *     rank = comm.Get_rank()             # <<<<<<<<<<<<<<
  * 
- * def Build_FF_Hamiltonian_Fourth_Order_L_Block(input_par):
+ * def Build_FF_Hamiltonian_Fourth_Order(input_par):
  */
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_comm); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
@@ -8892,11 +8892,11 @@ if (!__Pyx_RefNanny) {
   /* "Field_Free.pyx":18
  *     rank = comm.Get_rank()
  * 
- * def Build_FF_Hamiltonian_Fourth_Order_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Build_FF_Hamiltonian_Fourth_Order(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef float h2
  */
-  __pyx_t_4 = PyCFunction_NewEx(&__pyx_mdef_10Field_Free_1Build_FF_Hamiltonian_Fourth_Order_L_Block, NULL, __pyx_n_s_Field_Free); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 18, __pyx_L1_error)
+  __pyx_t_4 = PyCFunction_NewEx(&__pyx_mdef_10Field_Free_1Build_FF_Hamiltonian_Fourth_Order, NULL, __pyx_n_s_Field_Free); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Build_FF_Hamiltonian_Fourth_Orde_2, __pyx_t_4) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8904,11 +8904,11 @@ if (!__Pyx_RefNanny) {
   /* "Field_Free.pyx":113
  *     return FF_Hamiltonian
  * 
- * def Build_FF_Hamiltonian_Second_Order_L_Block(input_par):             # <<<<<<<<<<<<<<
+ * def Build_FF_Hamiltonian_Second_Order(input_par):             # <<<<<<<<<<<<<<
  * 
  *     cdef double h2
  */
-  __pyx_t_4 = PyCFunction_NewEx(&__pyx_mdef_10Field_Free_3Build_FF_Hamiltonian_Second_Order_L_Block, NULL, __pyx_n_s_Field_Free); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __pyx_t_4 = PyCFunction_NewEx(&__pyx_mdef_10Field_Free_3Build_FF_Hamiltonian_Second_Order, NULL, __pyx_n_s_Field_Free); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_Build_FF_Hamiltonian_Second_Orde, __pyx_t_4) < 0) __PYX_ERR(0, 113, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
