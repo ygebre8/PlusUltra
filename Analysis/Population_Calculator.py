@@ -9,10 +9,8 @@ if True:
     import json
     import os
     import seaborn as sns
-    sys.path.append('~/Research/PlusUltra/TDSE')
     import Module as Mod
-    from numpy import *
-    from matplotlib.pyplot import *
+
 
 def Field_Free_Wavefunction_Reader(Target_file, input):
     FF_WF = {}
@@ -21,7 +19,7 @@ def Field_Free_Wavefunction_Reader(Target_file, input):
     
     for l in range(n_max):
         for n in range(l + 1, n_max + 1):
-            group_name = "Psi_" + str(l) +"_" + str(n)
+            group_name = "BS_Psi_" + str(l) +"_" + str(n)
             FF_WF[(n, l)] = Target_file[group_name]
             FF_WF[(n, l)] = np.array(FF_WF[(n, l)][:,0] + 1.0j*FF_WF[(n, l)][:,1])
 	
@@ -85,9 +83,6 @@ def Population_Calculator(TP_WF, FF_WF, input_par):
     return Population, N_L_Pop, N_M_Pop, N_L_Pop_Given_M
 
 
-
-
-
 if __name__=="__main__":
     file = sys.argv[1]
     input_par = Mod.Input_File_Reader(file + "input.json")
@@ -102,7 +97,7 @@ if __name__=="__main__":
     print("Finished Calculating Populations \n")
 
     bound = 0
-    for k in Populations[0].keys():
-        bound += Populations[0][k]
+    for k in Pop.keys():
+        bound += Pop[k]
 
     print((1.0 - bound)*100)

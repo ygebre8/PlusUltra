@@ -66,15 +66,15 @@ if __name__=="__main__":
     energy, wave_function = Eigen_State_Solver(input_par)
     psi_inital = eval("Inital_State(input_par, wave_function)")
     
-    import cProfile
-    pr = cProfile.Profile()
-    pr.enable()
+    # import cProfile
+    # pr = cProfile.Profile()
+    # pr.enable()
 
     index_map_l_m, index_map_box = Mod.Index_Map(input_par)
     Prop.Crank_Nicolson_Time_Propagator(input_par, psi_inital)
     
-    pr.disable()
-    if rank == 0:
-        pr.print_stats(sort='time')
+    # pr.disable()
+    # if rank == 0:
+    #     pr.print_stats(sort='time')
 
     

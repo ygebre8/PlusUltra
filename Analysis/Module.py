@@ -39,9 +39,9 @@ def Target_File_Reader(input_par):
     wave_function = {}
     for l in range(input_par["n_max"]):
         for n in range(l + 1, input_par["n_max"]+1):
-            energy[(n, l)] = file["BS_Energy_" + str(l) + "_" + str(n)]
+            energy[(n, l)] = file["Energy_" + str(l) + "_" + str(n)]
             energy[(n, l)] = np.array(energy[(n, l)][:,0] + 1.0j*energy[(n, l)][:,1])
-            wave_function[(n, l)] = file["BS_Psi_" + str(l) + "_" + str(n)]
+            wave_function[(n, l)] = file["Psi_" + str(l) + "_" + str(n)]
             wave_function[(n, l)] = np.array(wave_function[(n, l)][:,0] + 1.0j*wave_function[(n, l)][:,1])
 
     return energy, wave_function
