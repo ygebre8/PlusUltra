@@ -63,7 +63,7 @@ def Make_Circ_HHG_Plot(energy, file_name):
     plt.grid(True, which='both')
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Helium_High_Cart_Counter_400_800.png")
+    plt.savefig("Helium_Cart_Co_200_400_2.png")
     plt.clf()
 
     # Prediced_Lines(4)
@@ -75,23 +75,31 @@ def Make_Circ_HHG_Plot(energy, file_name):
     plt.grid(True, which='both')#, axis='y')
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Helium_High_Circ_Counter_400_800.png")
+    plt.savefig("Helium_Circ_Co_200_400_2.png")
     plt.clf()
 
-def Linear_HHG_Plot(energy, file_name):
-    harmonic_z, data_z = Get_HHG_Data("z", energy, file_name)
+def Linear_HHG_Plot(energy, file_name, color, shift):
+    harmonic_x, data_x = Get_HHG_Data("x", energy, file_name)
+    harmonic_y, data_y = Get_HHG_Data("y", energy, file_name)
+    # harmonic_z, data_z = Get_HHG_Data("z", energy, file_name)
 
-    data_z = np.absolute(data_z)
+    data_x = np.absolute(data_x)
+    data_y = np.absolute(data_y)
+    # data_z = np.absolute(data_z)
 
-    plt.semilogy(harmonic_z, np.power(data_z/data_z.max(), 2.0), label = "Z-Axis")
-    plt.xticks(np.arange(0 + 1, 25 + 1, 1.0))
-    plt.xlim(0, 25)
+
+
+    plt.semilogy(harmonic_x, np.power(data_x/data_x.max(), 2.0), label = "X-Axis")
+    plt.semilogy(harmonic_y, np.power(data_y/data_y.max(), 2.0), label = "Y-Axis")
+    # plt.semilogy(harmonic_z, np.power(data_z/data_z.max(), 2.0) * shift, label = "Z-Axis", color = color)
+
+    plt.xticks(np.arange(0 + 1, 20 + 1, 1.0))
+    plt.xlim(0, 20)
     plt.ylim([1e-12, 1])
     plt.grid(True, which='both')
     plt.legend()
     plt.tight_layout()
-    plt.savefig("HHG_Cart_Z_A.png")
-    plt.clf()
+   
 
 def Full_HHG(axis, energy, file_name):
     time = np.loadtxt(file_name + "/time.txt")
@@ -213,14 +221,22 @@ def Dipole_Plot(file_name):
     # plt.show()
 
 if __name__=="__main__":
+    
+    energy = 0.114
+
     file_name = sys.argv[1]
-    # energy = 0.0SherlockHolmes221b
+    Linear_HHG_Plot(energy, file_name, 'k', pow(10,8))
 
-    energy = 0.057
-    # energy =  0.04275
-    # energy = 0.076
+    # file_name = sys.argv[2]
+    # Linear_HHG_Plot(energy, file_name, 'r', pow(10,4))
 
-    # Linear_HHG_Plot(energy, file_name)
-    Make_Circ_HHG_Plot(energy, file_name)
+    # file_name = sys.argv[3]
+    # Linear_HHG_Plot(energy, file_name, 'b', pow(10,0))
+
+    plt.savefig("HHG_Cart_VXY.png")
+    plt.clf()
+
+
+    # Make_Circ_HHG_Plot(energy, file_name)
     # HHG_Analysis(energy, file_name)
     # Dipole_Plot(file_name)
