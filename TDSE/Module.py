@@ -6,8 +6,7 @@ if True:
     import json
 
 def Make_Grid(grid_start, grid_end, h):
-    number_of_grid_points = ceil((grid_end - grid_start) / h) + 1
-    grid = np.linspace(grid_start, grid_end, number_of_grid_points)
+    grid = np.arange(h, grid_end + h, h)
     return grid
 
 def Input_File_Reader(input_file = "input.json"):

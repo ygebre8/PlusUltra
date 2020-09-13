@@ -23,14 +23,13 @@ if True:
     rank = comm.Get_rank()
 
 def Eigen_State_Solver(input_par):
-    solver = input_par["solver"]
-    if solver == "File":
+    if input_par["solver"] == "File":
         if rank == 0:
             print("Reading eigenstates from " + input_par["Target_File"] + "\n")
         energy, wave_function = Mod.Target_File_Reader(input_par)
         return energy, wave_function
 
-    elif solver == "SLEPC":
+    elif input_par["solver"] == "SLEPC":
         if rank == 0:
             print("Calculating the Eigenstates and storing them in " + input_par["Target_File"] + "\n")
     
@@ -61,18 +60,18 @@ def Inital_State(input_par, wave_function):
 
 
 if __name__=="__main__":
-
-    input_par = Mod.Input_File_Reader(input_file = "input.json")
-    energy, wave_function = Eigen_State_Solver(input_par)
-    psi_inital = eval("Inital_State(input_par, wave_function)")
     
     # import cProfile
     # pr = cProfile.Profile()
     # pr.enable()
 
-    index_map_l_m, index_map_box = Mod.Index_Map(input_par)
-    Prop.Crank_Nicolson_Time_Propagator(input_par, psi_inital)
-    
+    input_par = Mod.Input_File_Reader(input_file = "input.json")
+    energy, wave_function = Eigen_State_Solver(input_par)
+
+    if input_par["propagate"] == 1: 
+        psi_inital = eval("Inital_State(input_par, wave_function)")
+        Prop.Crank_Nicolson_Time_Propagator(input_par, psi_inital)
+
     # pr.disable()
     # if rank == 0:
     #     pr.print_stats(sort='time')
