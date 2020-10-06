@@ -113,12 +113,6 @@ def Build_Hamiltonian_Second_Order(potential, grid, input_par):
             Hamiltonian.setValue(i, i-1, (-1.0/2.0)/h2)
         if i < grid.size - 1:
             Hamiltonian.setValue(i, i+1, (-1.0/2.0)/h2)
-    
-        if input_par["calc_cont_states"] == 1:
-            j = grid.size - 1
-            Hamiltonian.setValue(j,j, potential[j] + (-1.0/2.0)/h2)
-            Hamiltonian.setValue(j,j - 1, 1.0/h2)
-            Hamiltonian.setValue(j,j - 2, (-1.0/2.0)/h2)
 
     Hamiltonian.assemblyBegin()
     Hamiltonian.assemblyEnd()
