@@ -9,12 +9,76 @@ if True:
     import scipy.integrate as Int
     import Module as Mod
 
+def Chirped_Gaussian(time, tau, beta, center = 0):
+    argument = -2*np.log(2)/(1+pow(beta,2))*np.power((time - center)/tau, 2.0)
+    return np.exp(argument)
+
+def Chirped_Omega(omega, time, tau, beta):
+    return omega + 4*np.log(2)*beta/(1+pow(beta,2))*time/pow(tau,2)
+
 def Gaussian(time, tau, center = 0):
     argument = -1*np.log(2)*np.power(2 *(time - center)/tau, 2.0)
     return np.exp(argument)
 
 def Sin(time, tau, center = 0):
     return np.power(np.sin(pi*time / tau), 2.0)
+
+def Chirped_Pulse(intensity, envelop_fun, omega, num_of_cycles, CEP, time_spacing, polarization, poynting, ellipticity, beta, frequency_shift = 1, cycle_delay = 0):
+    
+    mu = 8*np.log(2.0)/pow(pi,2)
+    if frequency_shift == 1:
+        omega = omega*2.0/(1.0 + np.sqrt(1+ mu/pow(num_of_cycles,2))) 
+    if frequency_shift != 1 and frequency_shift !=0:
+        print(frequency_shift)
+        print("freq shift should be 1 for true and 0 for false")
+        exit()
+
+    tau = 2*pi*num_of_cycles/omega
+    tau_delay = 2*pi*cycle_delay/omega
+    
+    intensity = intensity / 3.51e16
+    intensity = intensity / pow(1+pow(beta,2), 0.5)
+    amplitude = pow(intensity, 0.5) / omega
+
+
+    polarization = polarization / np.linalg.norm(polarization)
+    poynting = poynting / np.linalg.norm(poynting)
+    
+    if np.dot(polarization, poynting) != 0.0:
+        print("polarization of laser and the poynting direction are not orthagonal")
+        exit()
+    ellipticity_Vector = np.cross(poynting, polarization)    
+    ellipticity_Vector = ellipticity_Vector / np.linalg.norm(ellipticity_Vector)
+
+    Electric_Field = {}
+    Vector_Potential = {}
+
+    gaussian_length = 15
+    time = np.arange(0, gaussian_length* tau, time_spacing)
+    pulse_duration = gaussian_length * tau
+    
+    envelop = amplitude * envelop_fun(time, tau, beta, (gaussian_length * tau)/2)
+
+    omega = Chirped_Omega(omega, time, tau, beta)
+    
+    # plt.plot(time, omega)
+    # plt.savefig("omega.png")
+    # plt.clf()
+
+    for i in range(len(polarization)):    
+        Vector_Potential[i] = envelop * 1/np.sqrt(1+pow(ellipticity,2.0)) * (polarization[i] * np.sin(omega*(time - tau/2) + CEP) + ellipticity * ellipticity_Vector[i] * np.cos(omega*(time - tau/2) + CEP))
+        Electric_Field[i] =  -1.0 * np.gradient(Vector_Potential[i], time_spacing)
+
+        if tau_delay != 0:
+            time_delay = np.arange(0, tau_delay + time_spacing, time_spacing)
+            Vector_Potential[i] = np.pad(Vector_Potential[i], (len(time_delay),0), 'constant', constant_values=(0,0))
+            Electric_Field[i] = np.pad(Electric_Field[i], (len(time_delay),0), 'constant', constant_values=(0,0))
+            
+            
+            if envelop_fun == Sin:  
+                time = np.linspace(0, tau + tau_delay, len(Vector_Potential[i]))
+            
+    return time, Electric_Field, Vector_Potential, pulse_duration
 
 def Pulse(intensity, envelop_fun, omega, num_of_cycles, CEP, time_spacing, polarization, poynting, ellipticity, frequency_shift = 1, cycle_delay = 0):
     
@@ -93,9 +157,15 @@ def Build_Laser_Pulse(input_par):
         poynting = np.array(input_par["laser"]["pulses"][i]["poynting"])
         ellipticity = input_par["laser"]["pulses"][i]["ellipticity"]
         cycle_delay = input_par["laser"]["pulses"][i]["cycle_delay"]
+        beta = input_par["laser"]["pulses"][i]["beta"]
+
         if ellipticity != 0:
             elliptical_pulse = True
-        time, Electric_Field, Vector_Potential, pulse_duration = Pulse(intensity, eval(envelop_fun), omega, num_of_cycles, CEP, time_spacing, polarization, poynting, ellipticity, frequency_shift, cycle_delay)
+        
+        if envelop_fun == "Chirped_Gaussian":
+            time, Electric_Field, Vector_Potential, pulse_duration = Chirped_Pulse(intensity, eval(envelop_fun), omega, num_of_cycles, CEP, time_spacing, polarization, poynting, ellipticity, beta, frequency_shift, cycle_delay)
+        else:
+            time, Electric_Field, Vector_Potential, pulse_duration = Pulse(intensity, eval(envelop_fun), omega, num_of_cycles, CEP, time_spacing, polarization, poynting, ellipticity, frequency_shift, cycle_delay)
     
         
         if len(time) > len(laser_time):
@@ -187,16 +257,16 @@ def Pulse_Plotter(laser_time, laser_pulse, plot_name):
     plt.plot(laser_time, laser_pulse['y'], label = 'y')
     plt.plot(laser_time, laser_pulse['z'], label = 'z')
     
-    # plt.legend()
+    plt.legend()
     plt.savefig(plot_name)
     # plt.clf()
 
 if __name__=="__main__":
     polarization = np.array([1,0,0])
     poynting = np.array([0,0,1])
-    # input_par = Mod.Input_File_Reader("input.json")
+    input_par = Mod.Input_File_Reader("input.json")
     # time_1, Electric_Field_1, Vector_Potential_1, pulse_duration = Pulse(5.0e13, Sin, 0.375, 10, 0, 0.1, polarization, poynting, -1, 0, 2)
 
-    # laser_pulse, laser_time, total_polarization, total_poynting, elliptical_pulse = Build_Laser_Pulse(input_par)
+    laser_pulse, laser_time, total_polarization, total_poynting, elliptical_pulse = Build_Laser_Pulse(input_par)
     
 
