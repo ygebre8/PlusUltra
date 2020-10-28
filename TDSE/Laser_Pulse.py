@@ -10,15 +10,14 @@ if True:
     import Module as Mod
 
 def Chirped_Gaussian(time, tau, beta, center = 0):
-    argument = -2*np.log(2)/(1+pow(beta,2))*np.power((time - center)/tau, 2.0)
+    argument = -2*np.log(2)/(1+beta*beta)*np.power((time - center)/tau, 2.0)
     return np.exp(argument)
 
-def Chirped_Omega(omega, time, tau, beta):
-    return omega + 4*np.log(2)*beta/(1+pow(beta,2))*time/pow(tau,2)
+def Chirped_Omega(omega, time, tau, beta, center = 0):
+    return omega + 2*np.log(2)*beta/(1+beta*beta)*(time- center)/(tau*tau)
 
-def Chirped_Phi(omega, time, tau, beta):
-    return omega*time + 2*np.log(2)*beta/(1+pow(beta,2))*pow(time/tau,2)
-
+def Chirped_Phi(omega, time, tau, beta, center = 0):
+    return omega*(time- center) + 2*np.log(2)*beta/(1+beta*beta)*np.power((time- center)/tau,2)
 
 def Gaussian(time, tau, center = 0):
     argument = -1*np.log(2)*np.power(2 *(time - center)/tau, 2.0)
@@ -40,9 +39,10 @@ def Chirped_Pulse(intensity, envelop_fun, omega, num_of_cycles, CEP, time_spacin
     tau = 2*pi*num_of_cycles/omega
     tau_delay = 2*pi*cycle_delay/omega
     
+    # print(tau)
     intensity = intensity / 3.51e16
-    intensity = intensity / pow(1+pow(beta,2), 0.5)
-    amplitude = pow(intensity, 0.5) / omega
+    intensity = intensity / np.sqrt(1+beta*beta)
+    amplitude = np.sqrt(intensity) / omega
 
 
     polarization = polarization / np.linalg.norm(polarization)
@@ -57,21 +57,22 @@ def Chirped_Pulse(intensity, envelop_fun, omega, num_of_cycles, CEP, time_spacin
     Electric_Field = {}
     Vector_Potential = {}
 
-    gaussian_length = 15
-    time = np.arange(0, gaussian_length* tau, time_spacing)
+    gaussian_length = 8
+    time = np.arange(0,  gaussian_length* tau , time_spacing)
     pulse_duration = gaussian_length * tau
     
     envelop = amplitude * envelop_fun(time, tau, beta, (gaussian_length * tau)/2)
 
-    omega = Chirped_Omega(omega, time, tau, beta)
-    phi = Chirped_Phi(omega, time, tau, beta)
+    omega = Chirped_Omega(omega, time, tau, beta , (gaussian_length * tau)/2)
+    phi = Chirped_Phi(omega, time, tau, beta, (gaussian_length * tau)/2)
 
-    # plt.plot(time, omega)
-    # plt.savefig("omega.png")
-    # plt.clf()
+    plt.plot(time, omega)
+    plt.savefig("omega.png")
+    plt.clf()
 
     for i in range(len(polarization)):    
         # Vector_Potential[i] = envelop * 1/np.sqrt(1+pow(ellipticity,2.0)) * (polarization[i] * np.sin(omega*(time - tau/2) + CEP) + ellipticity * ellipticity_Vector[i] * np.cos(omega*(time - tau/2) + CEP))
+        # Vector_Potential[i] = envelop*polarization[i]*np.sin(omega*(time- (gaussian_length * tau)/2) + CEP)
         Vector_Potential[i] = envelop*polarization[i]*np.cos(phi)
 
         Electric_Field[i] =  -1.0 * np.gradient(Vector_Potential[i], time_spacing)
@@ -84,7 +85,7 @@ def Chirped_Pulse(intensity, envelop_fun, omega, num_of_cycles, CEP, time_spacin
             
             if envelop_fun == Sin:  
                 time = np.linspace(0, tau + tau_delay, len(Vector_Potential[i]))
-            
+
     return time, Electric_Field, Vector_Potential, pulse_duration
 
 def Pulse(intensity, envelop_fun, omega, num_of_cycles, CEP, time_spacing, polarization, poynting, ellipticity, frequency_shift = 1, cycle_delay = 0):
@@ -269,11 +270,20 @@ def Pulse_Plotter(laser_time, laser_pulse, plot_name):
     # plt.clf()
 
 if __name__=="__main__":
-    polarization = np.array([1,0,0])
-    poynting = np.array([0,0,1])
-    input_par = Mod.Input_File_Reader("input.json")
-    # time_1, Electric_Field_1, Vector_Potential_1, pulse_duration = Pulse(5.0e13, Sin, 0.375, 10, 0, 0.1, polarization, poynting, -1, 0, 2)
+    polarization = np.array([0,0,1])
+    poynting = np.array([1,0,0])
+    # input_par = Mod.Input_File_Reader("input.json")
 
-    laser_pulse, laser_time, total_polarization, total_poynting, elliptical_pulse = Build_Laser_Pulse(input_par)
+    time_1, Electric_Field_1, Vector_Potential_1, pulse_duration = Chirped_Pulse(1.0e15, Chirped_Gaussian, 1.927213051, 1, 0, 0.1, polarization, poynting, 0, 0, 0 )
+    time_2, Electric_Field_2, Vector_Potential_2, pulse_duration = Chirped_Pulse(1.0e15, Chirped_Gaussian, 1.927213051, 1, 0, 0.1, polarization, poynting, 0, -1.75, 0)
+    time_3, Electric_Field_3, Vector_Potential_3, pulse_duration = Chirped_Pulse(1.0e15, Chirped_Gaussian, 1.927213051, 1, 0, 0.1, polarization, poynting, 0, 1.75, 0)
+
+    plt.plot(time_1, Vector_Potential_1[2], label = '0', color = 'r')
+    plt.plot(time_2, Vector_Potential_2[2], label = '-1.75', color = 'b', linestyle='--')
+    plt.plot(time_3, Vector_Potential_3[2], label = '1.75', color = 'g', linestyle='--')
+    plt.legend()
+    plt.savefig("pulse.png")
+
+    # laser_pulse, laser_time, total_polarization, total_poynting, elliptical_pulse = Build_Laser_Pulse(input_par)
     
 

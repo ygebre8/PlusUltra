@@ -246,11 +246,11 @@ if __name__=="__main__":
     Target_file =h5py.File(input_par["Target_File"])
 
     FF_WF = Field_Free_Wavefunction_Reader(Target_file, input)
-    print("Finished FF_WF \n")
+    # print("Finished FF_WF \n")
     TP_WF = Time_Propagated_Wavefunction_Reader(TDSE_file, input_par)
-    print("Finished TP_WF \n")
+    # print("Finished TP_WF \n")
     Pop, N_L_Pop, N_M_Pop, N_L_Pop_Given_M = Population_Calculator(TP_WF, FF_WF, input_par)
-    print("Finished Calculating Populations \n")
+    # print("Finished Calculating Populations \n")
      
     
     N_L_Population_Plotter(N_L_Pop, "plots/N_L_Pop", 5)
@@ -261,4 +261,5 @@ if __name__=="__main__":
     for k in Pop.keys():
         bound += Pop[k]
 
-    print("Ionzied percentage is " + str((1.0 - bound)*100))
+    print(1.0 - bound)
+    # print("Ionzied percentage is " + str((1.0 - bound)*100))
