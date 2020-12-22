@@ -253,8 +253,8 @@ if __name__=="__main__":
     # print("Finished Calculating Populations \n")
      
     
-    N_L_Population_Plotter(N_L_Pop, "plots/N_L_Pop", 5)
-    N_M_Population_Plotter(N_M_Pop, "plots/N_M_Pop", 5)
+    # N_L_Population_Plotter(N_L_Pop, "plots/N_L_Pop", 5)
+    # N_M_Population_Plotter(N_M_Pop, "plots/N_M_Pop", 5)
     # N_L_Given_M_Population_Plotter(N_L_Pop_Given_M, 5)
 
     bound = 0

@@ -14,7 +14,7 @@ def Chirped_Gaussian(time, tau, beta, center = 0):
     return np.exp(argument)
 
 def Chirped_Omega(omega, time, tau, beta, center = 0):
-    return omega + 2*np.log(2)*beta/(1+beta*beta)*(time- center)/(tau*tau)
+    return omega + 4*np.log(2)*beta/(1+beta*beta)*(time- center)/(tau*tau)
 
 def Chirped_Phi(omega, time, tau, beta, center = 0):
     return omega*(time- center) + 2*np.log(2)*beta/(1+beta*beta)*np.power((time- center)/tau,2)
@@ -73,7 +73,7 @@ def Chirped_Pulse(intensity, envelop_fun, omega, num_of_cycles, CEP, time_spacin
     for i in range(len(polarization)):    
         # Vector_Potential[i] = envelop * 1/np.sqrt(1+pow(ellipticity,2.0)) * (polarization[i] * np.sin(omega*(time - tau/2) + CEP) + ellipticity * ellipticity_Vector[i] * np.cos(omega*(time - tau/2) + CEP))
         # Vector_Potential[i] = envelop*polarization[i]*np.sin(omega*(time- (gaussian_length * tau)/2) + CEP)
-        Vector_Potential[i] = envelop*polarization[i]*np.cos(phi)
+        # Vector_Potential[i] = envelop*polarization[i]*np.cos(phi)
 
         Electric_Field[i] =  -1.0 * np.gradient(Vector_Potential[i], time_spacing)
 

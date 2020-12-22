@@ -7,6 +7,7 @@ sys.path.append('/home/becker/yoge8051/Research/PlusUltra/TDSE')
 import Laser_Pulse as LP 
 import Module as Mod 
 
+""" This function reads in the  dipole acc data and does the fft and gives the harmonic axis """
 def Get_HHG_Data(axis, energy, file_name):
     time = np.loadtxt(file_name + "/time.txt")
     if axis == "x":
@@ -39,6 +40,7 @@ def Make_Circ_HHG_Plot(energy, file_name):
 
     right = np.absolute(data_x + 1.0j*data_y)
     left = np.absolute(data_x - 1.0j*data_y)
+
     data_x = np.absolute(data_x)
     data_y = np.absolute(data_y)
 
@@ -46,14 +48,14 @@ def Make_Circ_HHG_Plot(energy, file_name):
     right_max = right.max()
     left_max = left.max()
 
-    
-    # if right_max >= left_max:
-    #     right /= right_max
-    #     left /=right_max
+    """This is normalizing the HHG spectrum """
+    if right_max >= left_max:
+        right /= right_max
+        left /=right_max
 
-    # else:
-    #     right /= left_max
-    #     left /=left_max
+    else:
+        right /= left_max
+        left /=left_max
 
     plt.semilogy(harmonic_x, np.power(data_x, 2.0), label = "X-Axis")
     plt.semilogy(harmonic_y, np.power(data_y, 2.0), label = "Y-Axis")
@@ -63,10 +65,10 @@ def Make_Circ_HHG_Plot(energy, file_name):
     plt.grid(True, which='both')
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Helium_Cart_Co_200_400_2.png")
+    plt.savefig("Helium_Cart.png")
     plt.clf()
 
-    # Prediced_Lines(4)
+
     plt.semilogy(harmonic_x, np.power(right, 2.0), label = "Right", color = 'r')
     plt.semilogy(harmonic_x, np.power(left, 2.0), label = "Left", color = 'b')
     plt.xticks(np.arange(0 + 1, 25 + 1, 2.0))
@@ -75,7 +77,7 @@ def Make_Circ_HHG_Plot(energy, file_name):
     plt.grid(True, which='both')#, axis='y')
     plt.legend()
     plt.tight_layout()
-    plt.savefig("Helium_Circ_Co_200_400_2.png")
+    plt.savefig("Helium_Circ.png")
     plt.clf()
 
 def Linear_HHG_Plot(energy, file_name, color, shift):

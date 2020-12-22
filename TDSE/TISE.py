@@ -160,6 +160,10 @@ def TISE(input_par):
 if __name__=="__main__":
     start_time = time.time()
     input_par = Mod.Input_File_Reader("input.json")
+
+    if rank == 0:    
+        print("Starting")
+    
     TISE(input_par)
     total_time = round((time.time() - start_time) / 60, 3)
     

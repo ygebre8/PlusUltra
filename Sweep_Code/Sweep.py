@@ -29,19 +29,18 @@ if __name__=="__main__":
    
     os.chdir("Sweep") ## This moves you into the Sweep directory; notice the chdir at the end
     
-    sweep_range = np.arange(-4,4.2,0.2) ## creates a range of beta parameters that I want to sweep over
+    sweep_range = np.arange(-1,2,1) ## creates a range of beta parameters that I want to sweep over
 
     """ here we have two variables for the for loop, i that just gors from 0 to the length of the sweep rnage and s that holds the variables of the sweep"""
-    for i, s in enumerate(sweep_range): 
-       
-       """ Here I create directories for the jobs calles Job_ and a number next to it that is indexed by i"""
+    for i, s in enumerate(sweep_range):
+        """ Here I create directories for the jobs calles Job_ and a number next to it that is indexed by i"""
         Job_Name = "Job_" + str(i) 
         if not os.path.exists(Job_Name):
             os.makedirs(Job_Name)
 
         os.chdir(Job_Name) ## move to the Job_Name directory, here Nmae is 0,1,2 ...
         os.system('cp ../../Sample_Job/input.json .') ## here i am copying the input file from the Sameple directory and moving into the Job_Name directory that I am currently in
-        os.system('cp ../../Sample_Job/Helium.h5 .') ## same for helium
+        os.system('cp ../../Sample_Job/Hydrogen.h5 .') ## same for helium
         
         print(round(s,5))
 
