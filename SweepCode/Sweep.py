@@ -40,7 +40,7 @@ if __name__=="__main__":
 
         os.chdir(Job_Name) ## move to the Job_Name directory, here Nmae is 0,1,2 ...
         os.system('cp ../../Sample_Job/input.json .') ## here i am copying the input file from the Sameple directory and moving into the Job_Name directory that I am currently in
-        os.system('cp ../../Sample_Job/Hydrogen.h5 .') ## same for helium
+        os.system('cp ../../Sample_Job/Helium.h5 .') ## same for helium
         
         print(round(s,5))
 
